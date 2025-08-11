@@ -14,7 +14,7 @@ export const products: Product[] = [
     name: 'Pelwatte Salted Butter',
     description: 'Creamy, rich, and perfectly salted butter.',
     longDescription: 'Made from the freshest milk from local Sri Lankan farms, Pelwatte Salted Butter offers a rich, creamy texture and a perfectly balanced salty flavor. Ideal for spreading, baking, and cooking, it brings a touch of luxury to any dish.',
-    imageUrl: 'https://placehold.co/400x400.png',
+    imageUrl: 'https://i.ibb.co/68nL34B/image.png',
     imageHint: 'butter spread',
     categoryId: 'butter-ghee',
     nutritionalFacts: [
@@ -29,7 +29,7 @@ export const products: Product[] = [
     name: 'Pelwatte Ghee',
     description: 'Pure and aromatic clarified butter.',
     longDescription: 'Our Pelwatte Ghee is a premium clarified butter, known for its rich aroma, nutty flavor, and high smoke point. It\'s a versatile cooking medium that is perfect for traditional recipes, frying, and as a flavorful topping.',
-    imageUrl: 'https://placehold.co/400x400.png',
+    imageUrl: 'https://i.ibb.co/rvwzGP6/image.png',
     imageHint: 'ghee jar',
     categoryId: 'butter-ghee',
     nutritionalFacts: [
@@ -44,7 +44,7 @@ export const products: Product[] = [
     name: 'Pelwatte Drinking Yoghurt',
     description: 'A refreshing and healthy yoghurt drink.',
     longDescription: 'Enjoy the tangy and refreshing taste of Pelwatte Drinking Yoghurt. Packed with probiotics and made with real fruit flavors, it\'s a healthy and convenient snack for any time of the day.',
-    imageUrl: 'https://placehold.co/400x400.png',
+    imageUrl: 'https://i.ibb.co/Vtxx8st/image.png',
     imageHint: 'yoghurt drink',
     categoryId: 'yoghurt',
     nutritionalFacts: [
@@ -59,7 +59,7 @@ export const products: Product[] = [
     name: 'Vanilla Ice Cream',
     description: 'Classic, creamy vanilla ice cream tub.',
     longDescription: 'Indulge in the timeless flavor of our classic Vanilla Ice Cream. Made with real vanilla extract and fresh cream, its smooth, rich texture makes it a perfect dessert for any occasion.',
-    imageUrl: 'https://placehold.co/400x400.png',
+    imageUrl: 'https://i.ibb.co/k0gZvJ5/image.png',
     imageHint: 'vanilla icecream',
     categoryId: 'ice-cream',
     nutritionalFacts: [
@@ -74,7 +74,7 @@ export const products: Product[] = [
     name: 'Chocolate Ice Cream',
     description: 'Rich and decadent chocolate ice cream.',
     longDescription: 'For the ultimate chocolate lover, our Chocolate Ice Cream is a dream come true. Made with rich cocoa and creamy dairy, every spoonful is a decadent and satisfying experience.',
-    imageUrl: 'https://placehold.co/400x400.png',
+    imageUrl: 'https://i.ibb.co/8Dfm4T2/image.png',
     imageHint: 'chocolate icecream',
     categoryId: 'ice-cream',
     nutritionalFacts: [
@@ -89,7 +89,7 @@ export const products: Product[] = [
     name: 'Pelwatte Full Cream Milk',
     description: 'Fresh and nutritious full cream UHT milk.',
     longDescription: 'Pelwatte Full Cream Milk is pure, fresh, and full of natural goodness. Sourced from our trusted local farms, it is perfect for drinking, with cereals, or in your favorite recipes.',
-    imageUrl: 'https://placehold.co/400x400.png',
+    imageUrl: 'https://i.ibb.co/sK4Y1sV/image.png',
     imageHint: 'milk carton',
     categoryId: 'milk',
     nutritionalFacts: [
@@ -104,7 +104,7 @@ export const products: Product[] = [
     name: 'Pelwatte Full Cream Milk Powder',
     description: 'Rich and creamy milk powder for all your needs.',
     longDescription: 'A household essential, Pelwatte Full Cream Milk Powder is made from 100% fresh milk. Its rich and creamy taste makes it ideal for beverages, cooking, and baking, providing nutrition and flavor in every scoop.',
-    imageUrl: 'https://placehold.co/400x400.png',
+    imageUrl: 'https://i.ibb.co/xJcQ1Yf/image.png',
     imageHint: 'milk powder',
     categoryId: 'milk-powder',
     nutritionalFacts: [
@@ -119,7 +119,7 @@ export const products: Product[] = [
     name: 'Fruit Yoghurt Cup',
     description: 'Creamy yoghurt with real fruit pieces.',
     longDescription: 'Experience the perfect blend of creamy yoghurt and delicious real fruit. Our Fruit Yoghurt Cups are a wholesome and delightful snack, available in a variety of fruit flavors.',
-    imageUrl: 'https://placehold.co/400x400.png',
+    imageUrl: 'https://i.ibb.co/SnsC1hh/image.png',
     imageHint: 'fruit yoghurt',
     categoryId: 'yoghurt',
     nutritionalFacts: [
