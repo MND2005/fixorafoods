@@ -75,13 +75,16 @@ export function ProductRecommendations({ product }: ProductRecommendationsProps)
   // Convert recommended products to a format ProductCard can use
   const recommendationCards = recommendations.map((rec, index) => {
     const matchedCategory = categories.find(c => c.name.toLowerCase() === rec.category.toLowerCase())
+    const imageHint = rec.name.toLowerCase().split(' ').slice(0,2).join(' ');
     return {
         id: `rec-${index}`,
         name: rec.name,
         description: rec.description,
         longDescription: rec.description,
         imageUrl: rec.imageUrl,
-        imageHint: rec.name.toLowerCase().split(' ').slice(0,2).join(' '),
+        imageUrls: [rec.imageUrl],
+        imageHint: imageHint,
+        imageHints: [imageHint],
         categoryId: matchedCategory?.id || 'milk',
         nutritionalFacts: []
     }

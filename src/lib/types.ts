@@ -9,7 +9,9 @@ export interface Product {
   description: string;
   longDescription: string;
   imageUrl: string;
+  imageUrls: string[];
   imageHint: string;
+  imageHints: string[];
   categoryId: string;
   nutritionalFacts: NutritionalFact[];
 }

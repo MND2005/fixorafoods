@@ -4,6 +4,13 @@ import { products, categories } from '@/lib/data';
 import { Badge } from '@/components/ui/badge';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { ProductRecommendations } from '@/components/ProductRecommendations';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
 
 export async function generateStaticParams() {
   return products.map((product) => ({
@@ -23,16 +30,26 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="grid md:grid-cols-2 gap-8 md:gap-12">
-        <div className="rounded-lg overflow-hidden border shadow-lg">
-          <div className="relative aspect-square">
-            <Image
-              src={product.imageUrl}
-              alt={product.name}
-              data-ai-hint={product.imageHint}
-              fill
-              className="object-cover"
-            />
-          </div>
+        <div>
+          <Carousel className="rounded-lg overflow-hidden border shadow-lg">
+            <CarouselContent>
+              {product.imageUrls.map((url, index) => (
+                <CarouselItem key={index}>
+                  <div className="relative aspect-square">
+                    <Image
+                      src={url}
+                      alt={`${product.name} image ${index + 1}`}
+                      data-ai-hint={product.imageHints[index]}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-4" />
+            <CarouselNext className="right-4" />
+          </Carousel>
         </div>
 
         <div>

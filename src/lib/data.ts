@@ -11,9 +11,14 @@ export const products: Product[] = [
     description: 'Professional-grade milk storage tanks in various capacities.',
     longDescription: 'High-quality stainless steel milk storage tanks with temperature control for operations of all sizes. Features easy cleaning and a hygienic design. Available capacities: 250L, 500L, 2,500L, 3,500L, 5,000L, 10,000L, 25,000L.',
     imageUrl: 'https://placehold.co/600x400.png',
+    imageUrls: ['https://placehold.co/600x400.png', 'https://placehold.co/600x400.png'],
     imageHint: 'storage tank',
+    imageHints: ['storage tank', 'milk tank'],
     categoryId: 'machinery-equipment',
-    nutritionalFacts: [],
+    nutritionalFacts: [
+      { name: 'Construction', value: 'Stainless Steel' },
+      { name: 'Features', value: 'Temperature control, Easy cleaning, Hygienic design' },
+    ],
   },
   {
     id: '2',
@@ -21,9 +26,14 @@ export const products: Product[] = [
     description: 'Durable aluminum and stainless steel milk cans.',
     longDescription: 'Durable milk cans available in aluminum and stainless steel for safe milk transportation and storage. Features food-grade materials, secure lids, easy handling, and corrosion resistance. Available capacities: 5L, 10L, 20L, 40L.',
     imageUrl: 'https://placehold.co/600x400.png',
+    imageUrls: ['https://placehold.co/600x400.png', 'https://placehold.co/600x400.png'],
     imageHint: 'milk cans',
+    imageHints: ['milk cans', 'steel can'],
     categoryId: 'machinery-equipment',
-    nutritionalFacts: [],
+    nutritionalFacts: [
+        { name: 'Materials', value: 'Aluminum, Stainless Steel' },
+        { name: 'Features', value: 'Food-grade, Secure lids, Easy handling, Corrosion resistant' },
+    ],
   },
   {
     id: '3',
@@ -31,9 +41,13 @@ export const products: Product[] = [
     description: 'Advanced analyzers for rapid, accurate milk quality testing.',
     longDescription: 'Advanced milk analyzers for rapid, accurate milk quality testing to ensure product standards. Key features include rapid testing, multiple parameters, a digital display, and accurate results.',
     imageUrl: 'https://placehold.co/600x400.png',
+    imageUrls: ['https://placehold.co/600x400.png', 'https://placehold.co/600x400.png'],
     imageHint: 'milk analyzer',
+    imageHints: ['milk analyzer', 'lab equipment'],
     categoryId: 'machinery-equipment',
-    nutritionalFacts: [],
+    nutritionalFacts: [
+        { name: 'Features', value: 'Rapid testing, Multiple parameters, Digital display, Accurate results' },
+    ],
   },
   {
     id: '4',
@@ -41,9 +55,13 @@ export const products: Product[] = [
     description: 'Efficient and hygienic milking machines.',
     longDescription: 'Efficient milking machines designed to improve hygiene and efficiency in milking operations. Key features include a hygienic design, efficient operation, easy maintenance, and gentle on animals.',
     imageUrl: 'https://placehold.co/600x400.png',
+    imageUrls: ['https://placehold.co/600x400.png', 'https://placehold.co/600x400.png'],
     imageHint: 'milking machine',
+    imageHints: ['milking machine', 'dairy farm'],
     categoryId: 'machinery-equipment',
-    nutritionalFacts: [],
+    nutritionalFacts: [
+        { name: 'Features', value: 'Hygienic design, Efficient operation, Easy maintenance, Gentle on animals' },
+    ],
   },
   {
     id: '5',
@@ -51,9 +69,13 @@ export const products: Product[] = [
     description: 'Effective chaff cutters for fodder preparation.',
     longDescription: 'Effective chaff cutters for fodder preparation to support livestock feeding operations. Key features include sharp cutting blades, adjustable cut length, durable construction, and easy operation.',
     imageUrl: 'https://placehold.co/600x400.png',
+    imageUrls: ['https://placehold.co/600x400.png', 'https://placehold.co/600x400.png'],
     imageHint: 'chaff cutter',
+    imageHints: ['chaff cutter', 'farm equipment'],
     categoryId: 'machinery-equipment',
-    nutritionalFacts: [],
+    nutritionalFacts: [
+        { name: 'Features', value: 'Sharp blades, Adjustable cut, Durable, Easy operation' },
+    ],
   },
   {
     id: '6',
@@ -61,9 +83,13 @@ export const products: Product[] = [
     description: 'General-purpose dairy machinery and spare parts.',
     longDescription: 'A full range of general-purpose dairy machinery and replacement parts to reduce downtime. We ensure quality components, wide compatibility, quick delivery, and technical support.',
     imageUrl: 'https://placehold.co/600x400.png',
+    imageUrls: ['https://placehold.co/600x400.png', 'https://placehold.co/600x400.png'],
     imageHint: 'machinery parts',
+    imageHints: ['machinery parts', 'gears cogs'],
     categoryId: 'machinery-equipment',
-    nutritionalFacts: [],
+    nutritionalFacts: [
+        { name: 'Features', value: 'Quality components, Wide compatibility, Quick delivery, Technical support' },
+    ],
   },
 ];
 
