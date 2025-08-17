@@ -65,17 +65,19 @@ export function Header() {
           : 'bg-transparent'
       )}
     >
-      <div className="container flex h-20 items-center">
-        <div className="mr-6 flex">
+      <div className="container flex h-20 items-center justify-between">
+        <div className="flex items-center">
           <Link href="/" className="flex items-center space-x-2" onClick={() => setIsMenuOpen(false)}>
             <Leaf className="h-7 w-7 text-primary" />
             <span className="font-bold text-lg font-headline">Fixora food solutions</span>
           </Link>
         </div>
+        
         <nav className="hidden items-center space-x-8 text-sm font-medium md:flex">
           {navLinks.map(link => <NavLink key={link.href} href={link.href}>{link.label}</NavLink>)}
         </nav>
-        <div className="flex flex-1 items-center justify-end space-x-2">
+        
+        <div className="flex items-center justify-end space-x-2">
           <form onSubmit={handleSearch} className="hidden w-full max-w-xs items-center md:flex">
             <div className="relative w-full">
               <Input type="search" name="search" placeholder="Search products..." className="h-10 pl-10" />
