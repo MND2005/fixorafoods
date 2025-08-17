@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={ptSans.variable}>
-      <body className="flex flex-col min-h-screen font-body antialiased bg-background">
+      <body className="flex flex-col min-h-screen font-body antialiased">
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />

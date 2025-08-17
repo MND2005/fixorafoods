@@ -14,13 +14,15 @@ export function Header() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      const scrolled = window.scrollY > 10;
+      setIsScrolled(scrolled);
+      setIsVisible(scrolled);
     };
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Check scroll position on initial load
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -60,10 +62,9 @@ export function Header() {
   return (
     <header
       className={cn(
-        'sticky top-0 z-50 w-full transition-all duration-300',
-        isScrolled
-          ? 'translate-y-0 border-b border-border/40 bg-background/80 backdrop-blur-lg'
-          : '-translate-y-full'
+        'fixed top-0 z-50 w-full transition-all duration-300',
+        isScrolled ? 'border-b border-border/40 bg-background/80 backdrop-blur-lg' : 'bg-transparent',
+        isVisible ? 'translate-y-0' : '-translate-y-full'
       )}
     >
       <div className="container flex h-20 items-center">
