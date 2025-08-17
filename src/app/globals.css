@@ -84,7 +84,7 @@ body {
   }
   body {
     @apply text-foreground;
-    background: linear-gradient(to bottom, #4A90E2, #FFFFFF, #6BBF59);
+    background: linear-gradient(to bottom, #FFFFFF, #EDFFFF);
     background-attachment: fixed;
   }
 }
