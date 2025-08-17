@@ -14,11 +14,13 @@ export function Header() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrolled = window.scrollY > 10;
       setIsScrolled(scrolled);
+      setIsVisible(scrolled);
     };
     
     // Set initial state on client
@@ -69,14 +71,15 @@ export function Header() {
     <header
       className={cn(
         'fixed top-0 z-50 w-full transition-all duration-300',
-        isScrolled || isMenuOpen ? 'border-b border-border/40 bg-background/95 backdrop-blur-lg' : 'bg-transparent text-white'
+        isVisible || isMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0',
+        isScrolled || isMenuOpen ? 'border-b border-border/40 bg-background/95 backdrop-blur-lg' : 'bg-transparent'
       )}
     >
       <div className="container flex h-20 items-center">
         <div className="flex-1 flex justify-start">
           <Link href="/" className="flex items-center space-x-2" onClick={() => setIsMenuOpen(false)}>
             <Leaf className="h-7 w-7 text-primary" />
-            <span className="font-bold text-lg font-headline">Fixora food solutions</span>
+            <span className={cn("font-bold text-lg font-headline", !isScrolled && !isMenuOpen && "text-white")}>Fixora food solutions</span>
           </Link>
         </div>
         
