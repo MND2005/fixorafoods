@@ -22,7 +22,7 @@ export default function Home() {
       <section className="relative w-full h-screen text-white">
         <Carousel
           plugins={[plugin.current]}
-          className="absolute w-full h-full"
+          className="absolute inset-0 w-full h-full z-0"
           onMouseEnter={plugin.current.stop}
           onMouseLeave={plugin.current.reset}
         >
@@ -36,7 +36,6 @@ export default function Home() {
                     data-ai-hint={image.hint}
                     layout="fill"
                     objectFit="cover"
-                    className="z-0"
                     priority={index === 0}
                   />
                 </div>
