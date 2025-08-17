@@ -52,6 +52,12 @@ const nextConfig: NextConfig = {
         hostname: 'dairyconsultant.co.uk',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.debic.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },

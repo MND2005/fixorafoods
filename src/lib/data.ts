@@ -13,7 +13,7 @@ export const heroImages = [
     hint: 'dairy products',
   },
   {
-    src: 'https://www.zwirnerequipment.com/wp-content/uploads/2020/07/bigstock-Interior-Of-Dairy-Factory-With-361376272-1.jpg',
+    src: 'https://www.debic.com/sites/default/files/2019-12/Windmolens10_optimized_2.jpg',
     alt: 'Modern dairy processing facility',
     hint: 'dairy factory',
   },
