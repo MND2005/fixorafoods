@@ -1,3 +1,4 @@
+
 import type { Product, Category } from './types';
 
 export const categories: Category[] = [
@@ -11,14 +12,19 @@ export const heroImages = [
     hint: 'dairy products',
   },
   {
-    src: 'https://placehold.co/1600x900.png',
+    src: 'https://www.zwirnerequipment.com/wp-content/uploads/2020/07/bigstock-Interior-Of-Dairy-Factory-With-361376272-1.jpg',
     alt: 'Modern dairy processing facility',
     hint: 'dairy factory',
   },
   {
-    src: 'https://placehold.co/1600x900.png',
+    src: 'https://www.icsc.co.nz/admin/resources/kroger-img7-w800h600@2x.jpg',
     alt: 'Automated milking machine in operation',
     hint: 'milking machine',
+  },
+  {
+    src: 'https://static.vecteezy.com/system/resources/thumbnails/023/845/318/small/the-milk-factory-with-ai-generated-free-photo.jpg',
+    alt: 'Milk factory interior',
+    hint: 'milk factory',
   },
 ]
 
