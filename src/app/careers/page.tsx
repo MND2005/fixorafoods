@@ -10,7 +10,7 @@ export default function CareersPage() {
     <div className="bg-background">
       <section className="relative w-full h-64">
         <Image
-          src="https://placehold.co/1600x400.png"
+          src="https://dairyconsultant.co.uk/images/photos/photo1.png"
           alt="Team of people collaborating"
           layout="fill"
           objectFit="cover"

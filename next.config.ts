@@ -46,6 +46,12 @@ const nextConfig: NextConfig = {
         hostname: 'static.vecteezy.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'dairyconsultant.co.uk',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
