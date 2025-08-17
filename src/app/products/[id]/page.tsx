@@ -11,8 +11,9 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { CheckCircle } from 'lucide-react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { CheckCircle, Package, Star } from 'lucide-react';
+import { Separator } from '@/components/ui/separator';
 
 export async function generateStaticParams() {
   const productIds = products.map((product) => ({
@@ -24,7 +25,7 @@ export async function generateStaticParams() {
   return [...productIds, ...serviceIds];
 }
 
-export default function ProductDetailPage({ params }: { params: { id: string } }) {
+export default function ProductDetailPage({ params }: { params: { id:string } }) {
   const product = products.find((p) => p.id === params.id);
   const service = services.find((s) => s.id === params.id);
 
@@ -36,7 +37,7 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
     const category = categories.find((c) => c.id === service.categoryId);
     return (
         <div className="container mx-auto px-4 py-12">
-            <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
+            <div className="grid md:grid-cols-2 gap-12 items-start">
                 <div>
                      <div className="relative aspect-video rounded-lg overflow-hidden border shadow-lg">
                         <Image
@@ -49,49 +50,60 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
                     </div>
                 </div>
 
-                <div>
-                    {category && <Badge variant="secondary">{category.name}</Badge>}
-                    <h1 className="text-3xl md:text-4xl font-bold font-headline my-2">{service.name}</h1>
-                    <p className="text-lg text-muted-foreground">{service.description}</p>
+                <div className="space-y-6">
+                    <div>
+                        {category && <Badge variant="outline">{category.name}</Badge>}
+                        <h1 className="text-3xl md:text-4xl font-bold font-headline mt-2">{service.name}</h1>
+                        <p className="text-lg text-muted-foreground mt-4">{service.description}</p>
+                    </div>
+
+                    {service.offerings && service.offerings.length > 0 && (
+                        <Card>
+                            <CardHeader>
+                                <CardTitle>Our Offerings</CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                <ul className="space-y-3">
+                                    {service.offerings.map((offering, index) => (
+                                    <li key={index} className="flex items-center gap-3">
+                                        <CheckCircle className="w-5 h-5 text-primary" />
+                                        <span>{offering}</span>
+                                    </li>
+                                    ))}
+                                </ul>
+                            </CardContent>
+                        </Card>
+                    )}
+
+                    {service.benefits && service.benefits.length > 0 && (
+                        <Card>
+                             <CardHeader>
+                                <CardTitle>Benefits</CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                <ul className="space-y-3">
+                                    {service.benefits.map((benefit, index) => (
+                                    <li key={index} className="flex items-center gap-3">
+                                        <Star className="w-5 h-5 text-accent" />
+                                        <span>{benefit}</span>
+                                    </li>
+                                    ))}
+                                </ul>
+                            </CardContent>
+                        </Card>
+                    )}
                 </div>
             </div>
-             {service.offerings && service.offerings.length > 0 && (
-                <div className="mt-12">
-                    <h2 className="text-2xl font-bold font-headline mb-4">Our Offerings</h2>
-                     <div className="grid sm:grid-cols-2 gap-4">
-                        {service.offerings.map((offering, index) => (
-                        <div key={index} className="flex items-center">
-                            <CheckCircle className="w-5 h-5 mr-3 text-primary" />
-                            <span>{offering}</span>
-                        </div>
-                        ))}
-                    </div>
-                </div>
-            )}
-            {service.benefits && service.benefits.length > 0 && (
-                 <div className="mt-12">
-                    <h2 className="text-2xl font-bold font-headline mb-4">Benefits</h2>
-                     <div className="grid sm:grid-cols-2 gap-4">
-                        {service.benefits.map((benefit, index) => (
-                        <div key={index} className="flex items-center">
-                            <CheckCircle className="w-5 h-5 mr-3 text-primary" />
-                            <span>{benefit}</span>
-                        </div>
-                        ))}
-                    </div>
-                </div>
-            )}
         </div>
     )
   }
-
 
   if (product) {
     const category = categories.find((c) => c.id === product.categoryId);
 
     return (
       <div className="container mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+        <div className="grid md:grid-cols-2 gap-12 items-start">
           <div>
             <Carousel className="rounded-lg overflow-hidden border shadow-lg">
               <CarouselContent>
@@ -114,40 +126,47 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
             </Carousel>
           </div>
 
-          <div>
-            {category && <Badge variant="secondary">{category.name}</Badge>}
-            <h1 className="text-3xl md:text-4xl font-bold font-headline my-2">{product.name}</h1>
-            <p className="text-lg text-muted-foreground">{product.description}</p>
-            <div className="mt-6 prose max-w-none">
+          <div className="space-y-6">
+            <div>
+              {category && <Badge variant="outline">{category.name}</Badge>}
+              <h1 className="text-3xl md:text-4xl font-bold font-headline mt-2">{product.name}</h1>
+              <p className="text-lg text-muted-foreground mt-4">{product.description}</p>
+            </div>
+            
+            <Separator />
+
+            <div className="prose prose-lg max-w-none text-muted-foreground">
               <p>{product.longDescription}</p>
             </div>
-          </div>
-        </div>
-
-        <div className="mt-12">
-          <h2 className="text-2xl font-bold font-headline mb-4">Specifications</h2>
-          <div className="border rounded-lg overflow-hidden max-w-md">
-            <Table>
-              <TableHeader>
-                <TableRow>
-                  <TableHead>Feature</TableHead>
-                  <TableHead className="text-right">Details</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                {product.nutritionalFacts.map((fact) => (
-                  <TableRow key={fact.name}>
-                    <TableCell className="font-medium">{fact.name}</TableCell>
-                    <TableCell className="text-right">{fact.value}</TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
+            
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2 text-xl">
+                  <Package />
+                  <span>Specifications</span>
+                </CardTitle>
+                <CardDescription>
+                  Detailed information about the product features.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Table>
+                  <TableBody>
+                    {product.nutritionalFacts.map((fact) => (
+                      <TableRow key={fact.name}>
+                        <TableCell className="font-medium">{fact.name}</TableCell>
+                        <TableCell>{fact.value}</TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </CardContent>
+            </Card>
           </div>
         </div>
         
-        <div className="mt-16">
-          <h2 className="text-2xl font-bold font-headline mb-6 text-center">You Might Also Like</h2>
+        <div className="mt-20">
+          <h2 className="text-3xl font-bold font-headline mb-8 text-center">You Might Also Like</h2>
           <ProductRecommendations product={product} />
         </div>
       </div>
