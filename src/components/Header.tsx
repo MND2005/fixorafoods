@@ -20,6 +20,7 @@ export function Header() {
       setIsScrolled(window.scrollY > 10);
     };
     window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check scroll position on initial load
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -61,8 +62,8 @@ export function Header() {
       className={cn(
         'sticky top-0 z-50 w-full transition-all duration-300',
         isScrolled
-          ? 'border-b border-border/40 bg-background/80 backdrop-blur-lg'
-          : 'bg-transparent'
+          ? 'translate-y-0 border-b border-border/40 bg-background/80 backdrop-blur-lg'
+          : '-translate-y-full'
       )}
     >
       <div className="container flex h-20 items-center">
