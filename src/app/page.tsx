@@ -22,7 +22,7 @@ export default function Home() {
       <section className="relative w-full h-screen text-white">
         <Carousel
           plugins={[plugin.current]}
-          className="w-full h-full"
+          className="absolute w-full h-full"
           onMouseEnter={plugin.current.stop}
           onMouseLeave={plugin.current.reset}
         >
