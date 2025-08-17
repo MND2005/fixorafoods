@@ -10,7 +10,7 @@ export default function Home() {
     <div className="flex flex-col">
       <section className="relative w-full h-[50vh] md:h-[70vh] text-white">
         <Image
-          src="https://placehold.co/1600x900.png"
+          src="https://www.nutritionadvance.com/wp-content/uploads/2018/06/21-Healthy-Dairy-Products-From-Around-the-World.jpg"
           alt="Happy cows in a green pasture"
           data-ai-hint="dairy farm"
           layout="fill"
