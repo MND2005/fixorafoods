@@ -27,10 +27,10 @@ export default function Home() {
           onMouseEnter={plugin.current.stop}
           onMouseLeave={plugin.current.reset}
         >
-          <CarouselContent className="h-full">
+          <CarouselContent>
             {heroImages.map((image, index) => (
-              <CarouselItem key={index} className="h-full">
-                <div className="relative w-full h-full">
+              <CarouselItem key={index}>
+                <div className="relative w-full h-screen">
                   <Image
                     src={image.src}
                     alt={image.alt}
@@ -54,7 +54,7 @@ export default function Home() {
             High-quality, durable, and efficient machinery and equipment to optimize dairy operations.
           </p>
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold">
-            <Link href="#products-and-services">Explore Products & Services</Link>
+            <Link href="/products-and-services">Explore Products & Services</Link>
           </Button>
         </div>
       </section>
@@ -101,6 +101,8 @@ export default function Home() {
       <section id="products-and-services" className="py-12 md:py-20 bg-muted">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-10">Our Products & Services</h2>
+          
+          <h3 className="text-2xl font-headline font-bold text-center mb-6">Products</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {products.map((product) => (
                 <ProductCard key={product.id} product={product} />
@@ -108,50 +110,26 @@ export default function Home() {
           </div>
 
           <div className="mt-20">
-             <h3 className="text-3xl md:text-4xl font-headline font-bold text-center mb-10">Consultancy & Support</h3>
+             <h3 className="text-2xl font-headline font-bold text-center mb-10">Consultancy & Support</h3>
              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <Card>
-                    <CardHeader>
-                        <Briefcase className="w-10 h-10 text-primary mb-2" />
-                        <CardTitle>End-to-End Business Advisory</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <p className="text-muted-foreground">Hands-on expertise and strategic support to food and dairy businesses at every stage of development.</p>
-                    </CardContent>
-                </Card>
-                <Card>
-                    <CardHeader>
-                        <Wrench className="w-10 h-10 text-primary mb-2" />
-                        <CardTitle>Machinery Maintenance & Automation</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <p className="text-muted-foreground">Specialized preventive and corrective maintenance services combined with automation solutions.</p>
-                        <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-                            <li className="flex items-center"><CheckCircle className="w-4 h-4 mr-2 text-primary" />Preventive maintenance</li>
-                            <li className="flex items-center"><CheckCircle className="w-4 h-4 mr-2 text-primary" />Corrective repairs</li>
-                            <li className="flex items-center"><CheckCircle className="w-4 h-4 mr-2 text-primary" />Automation solutions</li>
-                            <li className="flex items-center"><CheckCircle className="w-4 h-4 mr-2 text-primary" />Performance optimization</li>
-                        </ul>
-                    </CardContent>
-                </Card>
-                 <Card>
-                    <CardHeader>
-                        <FileText className="w-10 h-10 text-primary mb-2" />
-                        <CardTitle>Quality Certification Support</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <p className="text-muted-foreground">Guidance and assistance in obtaining relevant quality standards and certifications.</p>
-                    </CardContent>
-                </Card>
-                 <Card>
-                    <CardHeader>
-                        <Briefcase className="w-10 h-10 text-primary mb-2" />
-                        <CardTitle>Business Planning and Development</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <p className="text-muted-foreground">Expert support in developing robust business plans, feasibility studies, and growth strategies.</p>
-                    </CardContent>
-                </Card>
+                {services.map((service) => (
+                    <Card key={service.id}>
+                        <CardHeader>
+                            <Briefcase className="w-10 h-10 text-primary mb-2" />
+                            <CardTitle>{service.name}</CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            <p className="text-muted-foreground">{service.description}</p>
+                            {service.offerings && (
+                                <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+                                    {service.offerings.map((offering, index) => (
+                                        <li key={index} className="flex items-center"><CheckCircle className="w-4 h-4 mr-2 text-primary" />{offering}</li>
+                                    ))}
+                                </ul>
+                            )}
+                        </CardContent>
+                    </Card>
+                ))}
              </div>
           </div>
         </div>
