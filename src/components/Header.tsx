@@ -87,51 +87,53 @@ export function Header() {
         isScrolled || isMenuOpen ? 'border-b border-border/40 bg-background/95 backdrop-blur-lg' : 'bg-transparent'
       )}
     >
-      <div className="container flex h-20 items-center">
-        <div className="flex-1 flex justify-start">
+      <div className="container flex h-20 items-center justify-between">
+        <div className="flex items-center">
           <Link href="/" className="flex items-center space-x-2" onClick={() => setIsMenuOpen(false)}>
             <Leaf className="h-7 w-7 text-primary" />
             <span className={cn("font-bold text-lg font-headline", !isScrolled && !isMenuOpen && pathname === '/' && "text-white")}>Fixora food solutions</span>
           </Link>
         </div>
         
-        <nav className="hidden flex-1 md:flex justify-center items-center space-x-6 text-sm font-medium">
-          {navLinks.map(link => <NavLink key={link.href} href={link.href}>{link.label}</NavLink>)}
-        </nav>
-        
-        <div className="flex-1 flex items-center justify-end space-x-2">
-          <form onSubmit={handleSearch} className="hidden w-full max-w-xs items-center md:flex">
-            <div className="relative w-full">
-              <Input type="search" name="search" placeholder="Search..." className={cn("h-10 pl-10", isScrolled || isMenuOpen || pathname !== '/' ? "bg-background" : "bg-white/20 placeholder:text-white/80 text-white" )} />
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+        <div className="flex items-center space-x-6">
+          <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+            {navLinks.map(link => <NavLink key={link.href} href={link.href}>{link.label}</NavLink>)}
+          </nav>
+          
+          <div className="flex items-center justify-end space-x-2">
+            <form onSubmit={handleSearch} className="hidden w-full max-w-xs items-center md:flex">
+              <div className="relative w-full">
+                <Input type="search" name="search" placeholder="Search..." className={cn("h-10 pl-10", isScrolled || isMenuOpen || pathname !== '/' ? "bg-background" : "bg-white/20 placeholder:text-white/80 text-white" )} />
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+              </div>
+            </form>
+            <div className="md:hidden">
+              <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
+                <SheetTrigger asChild>
+                  <Button variant="ghost" size="icon" className={cn(!isScrolled && !isMenuOpen && pathname === '/' && "text-white hover:text-white hover:bg-white/10")}>
+                    <Menu className="h-6 w-6" />
+                    <span className="sr-only">Toggle Menu</span>
+                  </Button>
+                </SheetTrigger>
+                <SheetContent side="left">
+                  <div className="flex flex-col p-4">
+                    <Link href="/" className="flex items-center space-x-2 mb-8" onClick={() => setIsMenuOpen(false)}>
+                      <Leaf className="h-7 w-7 text-primary" />
+                      <span className="font-bold text-lg">Fixora food solutions</span>
+                    </Link>
+                    <nav className="flex flex-col space-y-4 mb-8">
+                      {navLinks.map(link => <NavLink key={link.href} href={link.href}>{link.label}</NavLink>)}
+                    </nav>
+                    <form onSubmit={handleSearch} className="flex w-full items-center">
+                      <div className="relative w-full">
+                         <Input type="search" name="search" placeholder="Search..." className="h-10 pl-10" />
+                         <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                      </div>
+                    </form>
+                  </div>
+                </SheetContent>
+              </Sheet>
             </div>
-          </form>
-          <div className="md:hidden">
-            <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className={cn(!isScrolled && !isMenuOpen && pathname === '/' && "text-white hover:text-white hover:bg-white/10")}>
-                  <Menu className="h-6 w-6" />
-                  <span className="sr-only">Toggle Menu</span>
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="left">
-                <div className="flex flex-col p-4">
-                  <Link href="/" className="flex items-center space-x-2 mb-8" onClick={() => setIsMenuOpen(false)}>
-                    <Leaf className="h-7 w-7 text-primary" />
-                    <span className="font-bold text-lg">Fixora food solutions</span>
-                  </Link>
-                  <nav className="flex flex-col space-y-4 mb-8">
-                    {navLinks.map(link => <NavLink key={link.href} href={link.href}>{link.label}</NavLink>)}
-                  </nav>
-                  <form onSubmit={handleSearch} className="flex w-full items-center">
-                    <div className="relative w-full">
-                       <Input type="search" name="search" placeholder="Search..." className="h-10 pl-10" />
-                       <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                    </div>
-                  </form>
-                </div>
-              </SheetContent>
-            </Sheet>
           </div>
         </div>
       </div>
