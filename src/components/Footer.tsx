@@ -24,6 +24,7 @@ export function Footer() {
               <Link href="/products-and-services" className="hover:text-primary transition-colors">Products & Services</Link>
               <Link href="/about" className="hover:text-primary transition-colors">About Us</Link>
               <Link href="/careers" className="hover:text-primary transition-colors">Careers</Link>
+              <Link href="/contact" className="hover:text-primary transition-colors">Contact Us</Link>
             </nav>
           </div>
 

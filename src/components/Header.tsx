@@ -20,7 +20,6 @@ export function Header() {
     const handleScroll = () => {
       const scrolled = window.scrollY > 10;
       setIsScrolled(scrolled);
-      setIsVisible(scrolled);
     };
     
     // Set initial state on client
@@ -31,6 +30,18 @@ export function Header() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+  
+  useEffect(() => {
+    // Only show the header if it's scrolled or the menu is open
+    if (isScrolled || isMenuOpen) {
+      setIsVisible(true);
+    } else {
+      // Small delay to prevent flicker on load
+      const timer = setTimeout(() => setIsVisible(false), 100);
+      return () => clearTimeout(timer);
+    }
+  }, [isScrolled, isMenuOpen]);
+
 
   const handleSearch = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -49,6 +60,7 @@ export function Header() {
     { href: '/about', label: 'About Us' },
     { href: '/news', label: 'News' },
     { href: '/careers', label: 'Careers' },
+    { href: '/contact', label: 'Contact Us' },
   ];
   
   const NavLink = ({ href, children }: { href: string, children: React.ReactNode }) => {
@@ -71,7 +83,7 @@ export function Header() {
     <header
       className={cn(
         'fixed top-0 z-50 w-full transition-all duration-300',
-        isVisible || isMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0',
+        isVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0',
         isScrolled || isMenuOpen ? 'border-b border-border/40 bg-background/95 backdrop-blur-lg' : 'bg-transparent'
       )}
     >
@@ -79,7 +91,7 @@ export function Header() {
         <div className="flex-1 flex justify-start">
           <Link href="/" className="flex items-center space-x-2" onClick={() => setIsMenuOpen(false)}>
             <Leaf className="h-7 w-7 text-primary" />
-            <span className={cn("font-bold text-lg font-headline", !isScrolled && !isMenuOpen && "text-white")}>Fixora food solutions</span>
+            <span className={cn("font-bold text-lg font-headline", !isScrolled && !isMenuOpen && pathname === '/' && "text-white")}>Fixora food solutions</span>
           </Link>
         </div>
         
@@ -90,14 +102,14 @@ export function Header() {
         <div className="flex-1 flex items-center justify-end space-x-2">
           <form onSubmit={handleSearch} className="hidden w-full max-w-xs items-center md:flex">
             <div className="relative w-full">
-              <Input type="search" name="search" placeholder="Search..." className={cn("h-10 pl-10", isScrolled || isMenuOpen ? "bg-background" : "bg-white/20 placeholder:text-white/80" )} />
+              <Input type="search" name="search" placeholder="Search..." className={cn("h-10 pl-10", isScrolled || isMenuOpen || pathname !== '/' ? "bg-background" : "bg-white/20 placeholder:text-white/80 text-white" )} />
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             </div>
           </form>
           <div className="md:hidden">
             <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
+                <Button variant="ghost" size="icon" className={cn(!isScrolled && !isMenuOpen && pathname === '/' && "text-white hover:text-white hover:bg-white/10")}>
                   <Menu className="h-6 w-6" />
                   <span className="sr-only">Toggle Menu</span>
                 </Button>

@@ -53,7 +53,7 @@ export default function Home() {
             </h1>
             <p className="text-xl md:text-2xl mt-2 drop-shadow-md font-body">"Healthy Foods, Happy Lives"</p>
             <p className="text-lg md:text-xl max-w-2xl my-8 drop-shadow-md">
-              At Leo Foods (Pvt) Limited, we are committed to nourishing lives through a wide range of trusted, nutritious, and high-quality products and services. Driven by Industry 4.0 technology, we deliver excellence from farm to table and beyond.
+              At Fixora Foods (Pvt) Limited, we are committed to nourishing lives through a wide range of trusted, nutritious, and high-quality products and services. Driven by Industry 4.0 technology, we deliver excellence from farm to table and beyond.
             </p>
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold">
               <Link href="/products-and-services">Explore Products & Services</Link>

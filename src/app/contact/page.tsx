@@ -1,0 +1,79 @@
+import { Mail, MapPin, Phone, MessageSquare } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { ContactForm } from '@/components/ContactForm';
+
+export default function ContactPage() {
+  return (
+    <div className="container mx-auto px-4 py-12 md:py-16">
+      <div className="max-w-5xl mx-auto">
+
+        <section className="text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold font-headline">Contact Us</h1>
+          <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
+            Get in touch with us for any inquiries about our products, services, or business opportunities. We're here to help you succeed.
+          </p>
+        </section>
+
+        <div className="grid md:grid-cols-2 gap-12">
+          <div className="space-y-8">
+            <div>
+              <h2 className="text-2xl font-bold font-headline mb-2">Get In Touch</h2>
+              <p className="text-muted-foreground">
+                We'd love to hear from you. Whether you have questions about our products, need technical support, or want to explore business partnerships, our team is ready to assist.
+              </p>
+            </div>
+            <div className="space-y-4">
+              <div className="flex items-start">
+                <MapPin className="h-6 w-6 mr-4 mt-1 text-primary flex-shrink-0" />
+                <div>
+                  <h3 className="font-bold">Address</h3>
+                  <p className="text-muted-foreground">127/10, Mattegoda<br />Kottawa, Sri Lanka</p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <Mail className="h-6 w-6 mr-4 mt-1 text-primary flex-shrink-0" />
+                <div>
+                  <h3 className="font-bold">Email</h3>
+                  <a href="mailto:info@leofoods.com" className="text-muted-foreground hover:text-primary transition-colors">info@leofoods.com</a>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <Phone className="h-6 w-6 mr-4 mt-1 text-primary flex-shrink-0" />
+                <div>
+                  <h3 className="font-bold">Phone</h3>
+                  <p className="text-muted-foreground">Coming Soon</p>
+                </div>
+              </div>
+               <div className="flex items-start">
+                <MessageSquare className="h-6 w-6 mr-4 mt-1 text-primary flex-shrink-0" />
+                <div>
+                  <h3 className="font-bold">WhatsApp</h3>
+                  <p className="text-muted-foreground">Coming Soon</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <Card className="shadow-lg">
+            <CardHeader>
+              <CardTitle className="font-headline text-2xl">Send Us a Message</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ContactForm />
+            </CardContent>
+          </Card>
+        </div>
+        
+        <section className="mt-16 text-center bg-muted p-8 rounded-lg">
+            <h2 className="text-2xl font-bold font-headline mb-2">Find Us</h2>
+            <p className="text-muted-foreground mb-4">Visit our office in Kottawa, Sri Lanka</p>
+             <div className="bg-background border rounded-lg p-4 text-center">
+              <p className="font-medium">Interactive map coming soon</p>
+            </div>
+             <p className="text-muted-foreground mt-4">127/10, Mattegoda, Kottawa, Sri Lanka</p>
+        </section>
+
+      </div>
+    </div>
+  );
+}
