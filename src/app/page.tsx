@@ -18,7 +18,7 @@ export default function Home() {
           className="z-0"
         />
         <div className="absolute inset-0 bg-black/50 z-10" />
-        <div className="relative z-20 flex flex-col items-center justify-center h-full text-center p-4">
+        <div className="relative z-20 flex flex-col items-center justify-center h-full text-center p-4 -mt-10">
           <h1 className="text-4xl md:text-6xl font-headline font-bold mb-4 drop-shadow-lg">
             Machinery for Modern Dairy
           </h1>
