@@ -55,7 +55,7 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
                     <p className="text-lg text-muted-foreground">{service.description}</p>
                 </div>
             </div>
-             {service.offerings && (
+             {service.offerings && service.offerings.length > 0 && (
                 <div className="mt-12">
                     <h2 className="text-2xl font-bold font-headline mb-4">Our Offerings</h2>
                      <div className="grid sm:grid-cols-2 gap-4">
@@ -68,7 +68,7 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
                     </div>
                 </div>
             )}
-            {service.benefits && (
+            {service.benefits && service.benefits.length > 0 && (
                  <div className="mt-12">
                     <h2 className="text-2xl font-bold font-headline mb-4">Benefits</h2>
                      <div className="grid sm:grid-cols-2 gap-4">
