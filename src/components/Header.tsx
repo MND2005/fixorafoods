@@ -28,8 +28,10 @@ export function Header() {
       }
     };
     
-    // Set initial state
-    handleScroll();
+    // Set initial state on client
+    if (typeof window !== 'undefined') {
+        handleScroll();
+    }
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -47,7 +49,7 @@ export function Header() {
 
   const navLinks = [
     { href: '/', label: 'Home' },
-    { href: '/#products-and-services', label: 'Products & Services' },
+    { href: '/products-and-services', label: 'Products & Services' },
     { href: '/about', label: 'About Us' },
     { href: '/news', label: 'News' },
     { href: '/careers', label: 'Careers' },
@@ -74,7 +76,7 @@ export function Header() {
       className={cn(
         'fixed top-0 z-50 w-full transition-all duration-300',
         isScrolled ? 'border-b border-border/40 bg-background/80 backdrop-blur-lg' : 'bg-transparent',
-        isVisible ? 'translate-y-0' : '-translate-y-full'
+        isVisible || isMenuOpen ? 'translate-y-0' : '-translate-y-full'
       )}
     >
       <div className="container flex h-20 items-center">

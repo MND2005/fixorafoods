@@ -22,11 +22,7 @@ export const heroImages = [
     alt: 'Automated milking machine in operation',
     hint: 'milking machine',
   },
-  {
-    src: 'https://static.vecteezy.com/system/resources/thumbnails/023/845/318/small/the-milk-factory-with-ai-generated-free-photo.jpg',
-    alt: 'Milk factory interior',
-    hint: 'milk factory',
-  },
+ 
 ]
 
 export const products: Product[] = [
