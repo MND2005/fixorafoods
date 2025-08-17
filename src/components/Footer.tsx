@@ -3,7 +3,7 @@ import { Leaf } from 'lucide-react';
 
 export function Footer() {
   return (
-    <footer className="bg-blue-300/20 backdrop-blur-lg text-foreground border-t border-white/20 shadow-lg">
+    <footer className="bg-sky-500/30 backdrop-blur-lg text-foreground border-t border-white/20 shadow-lg">
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center mb-4 md:mb-0">
