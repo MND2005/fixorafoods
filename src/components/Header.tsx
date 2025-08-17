@@ -14,18 +14,11 @@ export function Header() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrolled = window.scrollY > 10;
       setIsScrolled(scrolled);
-      // Make it visible only when scrolled, not on initial load
-      if (scrolled) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
     };
     
     // Set initial state on client
@@ -50,6 +43,7 @@ export function Header() {
   const navLinks = [
     { href: '/', label: 'Home' },
     { href: '/products-and-services', label: 'Products & Services' },
+    { href: '/foods', label: 'Foods' },
     { href: '/about', label: 'About Us' },
     { href: '/news', label: 'News' },
     { href: '/careers', label: 'Careers' },
@@ -75,8 +69,7 @@ export function Header() {
     <header
       className={cn(
         'fixed top-0 z-50 w-full transition-all duration-300',
-        isScrolled ? 'border-b border-border/40 bg-background/80 backdrop-blur-lg' : 'bg-transparent',
-        isVisible || isMenuOpen ? 'translate-y-0' : '-translate-y-full'
+        isScrolled || isMenuOpen ? 'border-b border-border/40 bg-background/95 backdrop-blur-lg' : 'bg-transparent text-white'
       )}
     >
       <div className="container flex h-20 items-center">
@@ -87,14 +80,14 @@ export function Header() {
           </Link>
         </div>
         
-        <nav className="hidden flex-1 md:flex justify-center items-center space-x-8 text-sm font-medium">
+        <nav className="hidden flex-1 md:flex justify-center items-center space-x-6 text-sm font-medium">
           {navLinks.map(link => <NavLink key={link.href} href={link.href}>{link.label}</NavLink>)}
         </nav>
         
         <div className="flex-1 flex items-center justify-end space-x-2">
           <form onSubmit={handleSearch} className="hidden w-full max-w-xs items-center md:flex">
             <div className="relative w-full">
-              <Input type="search" name="search" placeholder="Search..." className="h-10 pl-10" />
+              <Input type="search" name="search" placeholder="Search..." className={cn("h-10 pl-10", isScrolled || isMenuOpen ? "bg-background" : "bg-white/20 placeholder:text-white/80" )} />
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             </div>
           </form>
