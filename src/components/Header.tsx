@@ -20,8 +20,17 @@ export function Header() {
     const handleScroll = () => {
       const scrolled = window.scrollY > 10;
       setIsScrolled(scrolled);
-      setIsVisible(scrolled);
+      // Make it visible only when scrolled, not on initial load
+      if (scrolled) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
     };
+    
+    // Set initial state
+    handleScroll();
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -37,7 +46,8 @@ export function Header() {
   };
 
   const navLinks = [
-    { href: '/', label: 'Products' },
+    { href: '/', label: 'Home' },
+    { href: '/#products-and-services', label: 'Products & Services' },
     { href: '/about', label: 'About Us' },
     { href: '/news', label: 'News' },
     { href: '/careers', label: 'Careers' },
@@ -82,7 +92,7 @@ export function Header() {
         <div className="flex-1 flex items-center justify-end space-x-2">
           <form onSubmit={handleSearch} className="hidden w-full max-w-xs items-center md:flex">
             <div className="relative w-full">
-              <Input type="search" name="search" placeholder="Search products..." className="h-10 pl-10" />
+              <Input type="search" name="search" placeholder="Search..." className="h-10 pl-10" />
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             </div>
           </form>

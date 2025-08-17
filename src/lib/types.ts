@@ -16,6 +16,18 @@ export interface Product {
   nutritionalFacts: NutritionalFact[];
 }
 
+export interface Service {
+    id: string;
+    name: string;
+    description: string;
+    imageUrl: string;
+    imageHint: string;
+    categoryId: string;
+    offerings?: string[];
+    benefits?: string[];
+}
+
+
 export interface Category {
   id: string;
   name: string;

@@ -11,7 +11,8 @@ export function Footer() {
             <span className="font-bold text-lg font-headline">Fixora food solutions ( pvt) ltd</span>
           </div>
           <nav className="flex space-x-4 mb-4 md:mb-0">
-            <Link href="/" className="hover:text-primary">Products</Link>
+            <Link href="/" className="hover:text-primary">Home</Link>
+            <Link href="/#products-and-services" className="hover:text-primary">Products & Services</Link>
             <Link href="/about" className="hover:text-primary">About Us</Link>
             <Link href="/news" className="hover:text-primary">News</Link>
             <Link href="/careers" className="hover:text-primary">Careers</Link>

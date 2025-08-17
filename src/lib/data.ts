@@ -1,8 +1,9 @@
 
-import type { Product, Category } from './types';
+import type { Product, Category, Service } from './types';
 
 export const categories: Category[] = [
   { id: 'machinery-equipment', name: 'Machinery & Equipment' },
+  { id: 'consultancy-services', name: 'Consultancy & Services' },
 ];
 
 export const heroImages = [
@@ -116,6 +117,53 @@ export const products: Product[] = [
     ],
   },
 ];
+
+export const services: Service[] = [
+    {
+        id: 's1',
+        name: 'End-to-End Business Advisory and Consultancy Services',
+        description: 'Hands-on expertise and strategic support to food and dairy businesses at every stage of development.',
+        imageUrl: 'https://placehold.co/600x400.png',
+        imageHint: 'business meeting',
+        categoryId: 'consultancy-services'
+    },
+    {
+        id: 's2',
+        name: 'Machinery Maintenance & Automation',
+        description: 'Specialized preventive and corrective maintenance services combined with automation solutions.',
+        imageUrl: 'https://placehold.co/600x400.png',
+        imageHint: 'industrial automation',
+        categoryId: 'consultancy-services',
+        offerings: [
+            'Preventive maintenance',
+            'Corrective repairs',
+            'Automation solutions',
+            'Performance optimization'
+        ],
+        benefits: [
+            'Reduced downtime',
+            'Increased efficiency',
+            'Cost savings',
+            'Improved reliability'
+        ]
+    },
+    {
+        id: 's3',
+        name: 'Quality Certification Support',
+        description: 'Guidance and assistance in obtaining relevant quality standards and certifications.',
+        imageUrl: 'https://placehold.co/600x400.png',
+        imageHint: 'certificate quality',
+        categoryId: 'consultancy-services'
+    },
+    {
+        id: 's4',
+        name: 'Business Planning and Development',
+        description: 'Expert support in developing robust business plans, feasibility studies, and growth strategies.',
+        imageUrl: 'https://placehold.co/600x400.png',
+        imageHint: 'business planning',
+        categoryId: 'consultancy-services'
+    }
+]
 
 
 export const newsArticles = [
