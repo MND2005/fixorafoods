@@ -14,6 +14,7 @@ export function Footer() {
             <Link href="/" className="hover:text-primary">Products</Link>
             <Link href="/about" className="hover:text-primary">About Us</Link>
             <Link href="/news" className="hover:text-primary">News</Link>
+            <Link href="/careers" className="hover:text-primary">Careers</Link>
           </nav>
           <p className="text-sm">&copy; {new Date().getFullYear()} Leo Foods. All rights reserved.</p>
         </div>

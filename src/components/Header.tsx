@@ -38,6 +38,9 @@ export function Header() {
           <Link href="/news" className="transition-colors hover:text-primary">
             News
           </Link>
+          <Link href="/careers" className="transition-colors hover:text-primary">
+            Careers
+          </Link>
         </nav>
         <div className="flex flex-1 items-center justify-end space-x-2">
           <form onSubmit={handleSearch} className="hidden w-full max-w-sm items-center md:flex">
@@ -69,6 +72,9 @@ export function Header() {
                     </Link>
                     <Link href="/news" className="transition-colors hover:text-primary">
                       News
+                    </Link>
+                    <Link href="/careers" className="transition-colors hover:text-primary">
+                      Careers
                     </Link>
                   </nav>
                   <form onSubmit={handleSearch} className="flex w-full items-center">
