@@ -1,22 +1,49 @@
+'use client'
+
+import * as React from 'react';
 import Image from 'next/image';
-import { products } from '@/lib/data';
+import { products, heroImages } from '@/lib/data';
 import { ProductCard } from '@/components/ProductCard';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Lightbulb, ShieldCheck, Heart } from 'lucide-react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel"
+import Autoplay from 'embla-carousel-autoplay';
 
 export default function Home() {
+  const plugin = React.useRef(Autoplay({ delay: 4000, stopOnInteraction: false }));
+
   return (
     <div className="flex flex-col">
       <section className="relative w-full h-screen text-white">
-        <Image
-          src="https://www.nutritionadvance.com/wp-content/uploads/2018/06/21-Healthy-Dairy-Products-From-Around-the-World.jpg"
-          alt="Happy cows in a green pasture"
-          data-ai-hint="dairy farm"
-          layout="fill"
-          objectFit="cover"
-          className="z-0"
-        />
+        <Carousel
+          plugins={[plugin.current]}
+          className="w-full h-full"
+          onMouseEnter={plugin.current.stop}
+          onMouseLeave={plugin.current.reset}
+        >
+          <CarouselContent className="h-full">
+            {heroImages.map((image, index) => (
+              <CarouselItem key={index} className="h-full">
+                <div className="relative w-full h-full">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    data-ai-hint={image.hint}
+                    layout="fill"
+                    objectFit="cover"
+                    className="z-0"
+                    priority={index === 0}
+                  />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
         <div className="absolute inset-0 bg-black/50 z-10" />
         <div className="relative z-20 flex flex-col items-center justify-center h-full text-center p-4">
           <h1 className="text-4xl md:text-6xl font-headline font-bold mb-4 drop-shadow-lg">

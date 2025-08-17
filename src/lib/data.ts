@@ -4,6 +4,24 @@ export const categories: Category[] = [
   { id: 'machinery-equipment', name: 'Machinery & Equipment' },
 ];
 
+export const heroImages = [
+  {
+    src: 'https://www.nutritionadvance.com/wp-content/uploads/2018/06/21-Healthy-Dairy-Products-From-Around-the-World.jpg',
+    alt: 'A spread of healthy dairy products',
+    hint: 'dairy products',
+  },
+  {
+    src: 'https://placehold.co/1600x900.png',
+    alt: 'Modern dairy processing facility',
+    hint: 'dairy factory',
+  },
+  {
+    src: 'https://placehold.co/1600x900.png',
+    alt: 'Automated milking machine in operation',
+    hint: 'milking machine',
+  },
+]
+
 export const products: Product[] = [
   {
     id: '1',
