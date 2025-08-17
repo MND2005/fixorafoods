@@ -1,4 +1,4 @@
-import { UtensilsCrossed, GlassWater, Wheat, Milk } from 'lucide-react';
+import { UtensilsCrossed, GlassWater, Milk } from 'lucide-react';
 import Image from 'next/image';
 
 export default function FoodsPage() {
@@ -15,8 +15,8 @@ export default function FoodsPage() {
         />
         <div className="absolute inset-0 bg-black/60 z-10" />
         <div className="relative z-20 flex flex-col items-center justify-center h-full text-center text-white p-4">
-          <h1 className="text-4xl md:text-5xl font-bold font-headline drop-shadow-lg">Our Upcoming Food Products</h1>
-          <p className="text-xl md:text-2xl mt-2 drop-shadow-md font-body">High-quality, nutritious, and great-tasting consumer products, coming soon to your table.</p>
+          <h1 className="text-4xl md:text-5xl font-bold font-headline drop-shadow-lg">Fresh & Processed Dairy Products, Natural Fruit Juices, Jams, and Sauces</h1>
+          <p className="text-xl md:text-2xl mt-2 drop-shadow-md font-body">Coming soon - High-quality, nutritious, and great-tasting consumer products.</p>
         </div>
       </section>
 
@@ -24,10 +24,7 @@ export default function FoodsPage() {
         <div className="max-w-4xl mx-auto">
 
           <section className="mb-12 text-center">
-            <h2 className="text-3xl font-bold font-headline mb-4">A Taste of What's to Come</h2>
-            <p className="text-lg text-muted-foreground">
-              We are passionately developing a new range of consumer products with a focus on freshness, nutrition, and incredible taste. From wholesome dairy to natural juices and delicious sauces, we're committed to bringing trusted quality to your kitchen.
-            </p>
+            <h2 className="text-3xl font-bold font-headline mb-4">Coming Soon</h2>
           </section>
 
           <section className="grid md:grid-cols-2 gap-8">
@@ -77,8 +74,7 @@ export default function FoodsPage() {
           </section>
           
           <section className="mt-16 text-center bg-muted p-8 rounded-lg">
-            <h2 className="text-2xl font-bold font-headline mb-2">Stay Tuned!</h2>
-            <p className="text-muted-foreground">We are working hard to perfect these offerings. Keep an eye on our News & Updates for launch announcements and more details.</p>
+            <p className="text-muted-foreground">Stay tuned for updates as we work toward delivering wholesome and trusted food products to your table.</p>
           </section>
 
         </div>
