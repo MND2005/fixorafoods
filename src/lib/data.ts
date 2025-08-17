@@ -10,8 +10,8 @@ export const products: Product[] = [
     name: 'Milk Storage Tanks',
     description: 'Professional-grade milk storage tanks in various capacities.',
     longDescription: 'High-quality stainless steel milk storage tanks with temperature control for operations of all sizes. Features easy cleaning and a hygienic design. Available capacities: 250L, 500L, 2,500L, 3,500L, 5,000L, 10,000L, 25,000L.',
-    imageUrl: '',
-    imageUrls: ['/images/diary-01.png', '/images/diary-02.png'],
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrls: ['https://placehold.co/600x400.png', 'https://placehold.co/600x400.png'],
     imageHint: 'storage tank',
     imageHints: ['storage tank', 'milk tank'],
     categoryId: 'machinery-equipment',
@@ -97,15 +97,15 @@ export const products: Product[] = [
 export const newsArticles = [
   {
     id: '1',
-    title: 'Pelwatte Dairy Expands its Product Line',
+    title: 'Leo Foods Expands its Product Line',
     date: '2024-07-15',
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'dairy products',
-    summary: 'We are excited to announce the launch of our new range of artisanal cheeses, crafted with the same dedication to quality and freshness you expect from Pelwatte.',
+    summary: 'We are excited to announce the launch of our new range of artisanal cheeses, crafted with the same dedication to quality and freshness you expect from Leo Foods.',
   },
   {
     id: '2',
-    title: 'Sustainability Initiatives at Pelwatte Farms',
+    title: 'Sustainability Initiatives at Leo Foods Farms',
     date: '2024-06-28',
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'green farming',
@@ -113,7 +113,7 @@ export const newsArticles = [
   },
   {
     id: '3',
-    title: 'Pelwatte Awarded "Best Dairy Provider 2024"',
+    title: 'Leo Foods Awarded "Best Dairy Provider 2024"',
     date: '2024-05-10',
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'award trophy',

@@ -8,13 +8,14 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center mb-4 md:mb-0">
             <Leaf className="h-6 w-6 text-primary mr-2" />
-            <span className="font-bold text-lg font-headline">Pelwatte Product Showcase</span>
+            <span className="font-bold text-lg font-headline">Leo Foods</span>
           </div>
           <nav className="flex space-x-4 mb-4 md:mb-0">
             <Link href="/" className="hover:text-primary">Products</Link>
+            <Link href="/about" className="hover:text-primary">About Us</Link>
             <Link href="/news" className="hover:text-primary">News</Link>
           </nav>
-          <p className="text-sm">&copy; {new Date().getFullYear()} Pelwatte Dairy. All rights reserved.</p>
+          <p className="text-sm">&copy; {new Date().getFullYear()} Leo Foods. All rights reserved.</p>
         </div>
       </div>
     </footer>

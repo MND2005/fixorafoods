@@ -12,8 +12,8 @@ const ptSans = PT_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Pelwatte Product Showcase',
-  description: 'Explore the range of dairy products from Pelwatte Dairy.',
+  title: 'Leo Foods',
+  description: 'Healthy Foods, Happy Lives. Explore dairy products, juices, and more from Leo Foods.',
 };
 
 export default function RootLayout({
