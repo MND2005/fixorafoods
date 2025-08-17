@@ -35,9 +35,9 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4">About Leo Foods</h2>
+              <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4">About Fixora food solutions ( pvt) ltd</h2>
               <p className="text-muted-foreground mb-6">
-                Leo Foods (Pvt) Limited was founded with a clear mission: to deliver safe, nutritious, and innovative food solutions to every household. With a strong Sri Lankan heritage and a future-forward mindset, we proudly serve a growing range of products across the dairy, beverages, spices, and processed food categories.
+                Fixora food solutions ( pvt) ltd was founded with a clear mission: to deliver safe, nutritious, and innovative food solutions to every household. With a strong Sri Lankan heritage and a future-forward mindset, we proudly serve a growing range of products across the dairy, beverages, spices, and processed food categories.
               </p>
               <Button asChild>
                 <Link href="/about">Learn More About Us</Link>

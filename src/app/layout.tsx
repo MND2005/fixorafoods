@@ -12,8 +12,8 @@ const ptSans = PT_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Leo Foods',
-  description: 'Healthy Foods, Happy Lives. Explore dairy products, juices, and more from Leo Foods.',
+  title: 'Fixora food solutions ( pvt) ltd',
+  description: 'Healthy Foods, Happy Lives. Explore dairy products, juices, and more from Fixora food solutions ( pvt) ltd.',
 };
 
 export default function RootLayout({

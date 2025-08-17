@@ -97,15 +97,15 @@ export const products: Product[] = [
 export const newsArticles = [
   {
     id: '1',
-    title: 'Leo Foods Expands its Product Line',
+    title: 'Fixora food solutions ( pvt) ltd Expands its Product Line',
     date: '2024-07-15',
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'dairy products',
-    summary: 'We are excited to announce the launch of our new range of artisanal cheeses, crafted with the same dedication to quality and freshness you expect from Leo Foods.',
+    summary: 'We are excited to announce the launch of our new range of artisanal cheeses, crafted with the same dedication to quality and freshness you expect from Fixora food solutions ( pvt) ltd.',
   },
   {
     id: '2',
-    title: 'Sustainability Initiatives at Leo Foods Farms',
+    title: 'Sustainability Initiatives at Fixora food solutions ( pvt) ltd Farms',
     date: '2024-06-28',
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'green farming',
@@ -113,7 +113,7 @@ export const newsArticles = [
   },
   {
     id: '3',
-    title: 'Leo Foods Awarded "Best Dairy Provider 2024"',
+    title: 'Fixora food solutions ( pvt) ltd Awarded "Best Dairy Provider 2024"',
     date: '2024-05-10',
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'award trophy',

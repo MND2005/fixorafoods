@@ -39,7 +39,7 @@ const prompt = ai.definePrompt({
   name: 'recommendProductsPrompt',
   input: {schema: RecommendProductsInputSchema},
   output: {schema: RecommendProductsOutputSchema},
-  prompt: `You are a product recommendation expert for Leo Foods.
+  prompt: `You are a product recommendation expert for Fixora food solutions ( pvt) ltd.
 
   Based on the product the user is currently viewing, recommend other relevant products that the user might be interested in.
   Provide the product name, description, image URL and category for each recommended product.

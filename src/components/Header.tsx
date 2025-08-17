@@ -25,7 +25,7 @@ export function Header() {
         <div className="mr-4 flex">
           <Link href="/" className="flex items-center space-x-2">
             <Leaf className="h-6 w-6 text-primary" />
-            <span className="font-bold font-headline">Leo Foods</span>
+            <span className="font-bold font-headline">Fixora food solutions ( pvt) ltd</span>
           </Link>
         </div>
         <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
@@ -61,7 +61,7 @@ export function Header() {
                 <div className="flex flex-col p-4 space-y-4">
                   <Link href="/" className="flex items-center space-x-2 mb-4">
                     <Leaf className="h-6 w-6 text-primary" />
-                    <span className="font-bold">Leo Foods</span>
+                    <span className="font-bold">Fixora food solutions ( pvt) ltd</span>
                   </Link>
                   <nav className="flex flex-col space-y-2">
                     <Link href="/" className="transition-colors hover:text-primary">

@@ -16,7 +16,7 @@ export default function AboutPage() {
         />
         <div className="absolute inset-0 bg-black/60 z-10" />
         <div className="relative z-20 flex flex-col items-center justify-center h-full text-center text-white p-4">
-          <h1 className="text-4xl md:text-5xl font-bold font-headline drop-shadow-lg">About Leo Foods</h1>
+          <h1 className="text-4xl md:text-5xl font-bold font-headline drop-shadow-lg">About Fixora food solutions ( pvt) ltd</h1>
           <p className="text-xl md:text-2xl mt-2 drop-shadow-md font-body">"Healthy Foods, Happy Lives"</p>
         </div>
       </section>
@@ -27,7 +27,7 @@ export default function AboutPage() {
           <section className="mb-12">
             <h2 className="text-3xl font-bold font-headline text-center mb-4">Our Story</h2>
             <p className="text-center text-muted-foreground text-lg">
-              Leo Foods (Pvt) Limited was founded with a clear mission: to deliver safe, nutritious, and innovative food solutions to every household. With a strong Sri Lankan heritage and a future-forward mindset, we proudly serve a growing range of products across the dairy, beverages, spices, and processed food categories. Leo Foods is not just a brand, it's a promise of nourishment, reliability, and growth. Whether you're a customer, distributor, or business partner, we welcome you to join our journey toward a healthier tomorrow.
+              Fixora food solutions ( pvt) ltd was founded with a clear mission: to deliver safe, nutritious, and innovative food solutions to every household. With a strong Sri Lankan heritage and a future-forward mindset, we proudly serve a growing range of products across the dairy, beverages, spices, and processed food categories. Fixora food solutions ( pvt) ltd is not just a brand, it's a promise of nourishment, reliability, and growth. Whether you're a customer, distributor, or business partner, we welcome you to join our journey toward a healthier tomorrow.
             </p>
           </section>
 

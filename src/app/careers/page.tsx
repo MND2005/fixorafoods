@@ -19,7 +19,7 @@ export default function CareersPage() {
         />
         <div className="absolute inset-0 bg-black/60 z-10" />
         <div className="relative z-20 flex flex-col items-center justify-center h-full text-center text-white p-4">
-          <h1 className="text-4xl md:text-5xl font-bold font-headline drop-shadow-lg">Careers at Leo Foods</h1>
+          <h1 className="text-4xl md:text-5xl font-bold font-headline drop-shadow-lg">Careers at Fixora food solutions ( pvt) ltd</h1>
           <p className="text-xl md:text-2xl mt-2 drop-shadow-md font-body">Join our team and be part of a culture that values dedication, teamwork, and excellence. Great food starts with great people.</p>
         </div>
       </section>
@@ -30,12 +30,12 @@ export default function CareersPage() {
           <section className="mb-12 text-center">
             <h2 className="text-3xl font-bold font-headline mb-4">Building the Future of Food Together</h2>
             <p className="text-lg text-muted-foreground">
-              At Leo Foods, we believe that great food starts with great people. Our team is the heart of everything we do, from crafting delicious products to delivering exceptional service.
+              At Fixora food solutions ( pvt) ltd, we believe that great food starts with great people. Our team is the heart of everything we do, from crafting delicious products to delivering exceptional service.
             </p>
           </section>
 
           <section className="mb-12">
-             <h2 className="text-3xl font-bold font-headline text-center mb-8">Life at Leo Foods</h2>
+             <h2 className="text-3xl font-bold font-headline text-center mb-8">Life at Fixora food solutions ( pvt) ltd</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
               <div className="flex flex-col items-center">
                 <Users className="w-12 h-12 text-primary mb-3" />
@@ -153,7 +153,7 @@ export default function CareersPage() {
             <p className="text-muted-foreground mb-6">Even if you don't see a perfect match right now, we'd love to hear from you. Send us your resume and let us know how you'd like to contribute to our mission.</p>
             <div className="flex justify-center gap-4">
                 <Button asChild size="lg">
-                    <Link href="mailto:hr@leofoods.com">
+                    <Link href="mailto:hr@fixorafoods.com">
                         <Mail className="mr-2 h-5 w-5" />
                         Send Your Resume
                     </Link>
