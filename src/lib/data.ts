@@ -8,7 +8,7 @@ export const categories: Category[] = [
 
 export const heroImages = [
   {
-    src: 'https://www.nutritionadvance.com/wp-content/uploads/2018/06/21-Healthy-Dairy-Products-From-Around-the-World.jpg',
+    src: 'https://resourcewebsite.singoo.cc/attached/20231014070737_89975.jpg',
     alt: 'A spread of healthy dairy products',
     hint: 'dairy products',
   },

@@ -58,6 +58,12 @@ const nextConfig: NextConfig = {
         hostname: 'www.debic.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'resourcewebsite.singoo.cc',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
