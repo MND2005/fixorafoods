@@ -8,12 +8,12 @@ export const categories: Category[] = [
 
 export const heroImages = [
   {
-    src: 'https://resourcewebsite.singoo.cc/attached/20231014070737_89975.jpg',
+    src: 'https://www.debic.com/sites/default/files/2019-12/Windmolens10_optimized_2.jpg',
     alt: 'A spread of healthy dairy products',
     hint: 'dairy products',
   },
   {
-    src: 'https://www.debic.com/sites/default/files/2019-12/Windmolens10_optimized_2.jpg',
+    src: 'https://resourcewebsite.singoo.cc/attached/20231014070737_89975.jpg',
     alt: 'Modern dairy processing facility',
     hint: 'dairy factory',
   },
