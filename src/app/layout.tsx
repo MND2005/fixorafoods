@@ -14,6 +14,9 @@ const ptSans = PT_Sans({
 export const metadata: Metadata = {
   title: 'Fixora food solutions ( pvt) ltd',
   description: 'Healthy Foods, Happy Lives. Explore dairy products, juices, and more from Fixora food solutions ( pvt) ltd.',
+  icons: {
+    icon: '/images/fixora-logo.png',
+  },
 };
 
 export default function RootLayout({
