@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { Leaf, MapPin, Mail, Phone } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
+import Image from 'next/image';
 
 export function Footer() {
   return (
@@ -9,8 +10,7 @@ export function Footer() {
           
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center mb-4">
-              <Leaf className="h-8 w-8 text-primary mr-3" />
-              <span className="font-bold text-2xl font-headline">Fixora foods</span>
+               <Image src="https://i.ibb.co/3kC6C69/fixora-logo.png" alt="Fixora Logo" width={150} height={50} />
             </div>
             <p className="text-muted-foreground max-w-md">
               At Leo Foods (Pvt) Limited, we are committed to nourishing lives through a wide range of trusted, nutritious, and high-quality products and services.

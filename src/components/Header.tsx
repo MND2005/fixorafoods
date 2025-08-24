@@ -3,11 +3,12 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { Leaf, Menu, Search } from 'lucide-react';
+import { Menu, Search } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
 
 export function Header() {
   const router = useRouter();
@@ -89,8 +90,7 @@ export function Header() {
       <div className="container flex h-20 items-center justify-between">
         <div className="flex items-center">
           <Link href="/" className="flex items-center space-x-2" onClick={() => setIsMenuOpen(false)}>
-            <Leaf className="h-7 w-7 text-primary" />
-            <span className={cn("font-bold text-lg font-headline", !isScrolled && !isMenuOpen && pathname === '/' && "text-white")}>Fixora food solutions</span>
+             <Image src="https://i.ibb.co/3kC6C69/fixora-logo.png" alt="Fixora Logo" width={120} height={40} className="h-10 w-auto" />
           </Link>
         </div>
         
@@ -117,8 +117,7 @@ export function Header() {
                 <SheetContent side="left">
                   <div className="flex flex-col p-4">
                     <Link href="/" className="flex items-center space-x-2 mb-8" onClick={() => setIsMenuOpen(false)}>
-                      <Leaf className="h-7 w-7 text-primary" />
-                      <span className="font-bold text-lg">Fixora food solutions</span>
+                        <Image src="https://i.ibb.co/3kC6C69/fixora-logo.png" alt="Fixora Logo" width={120} height={40} />
                     </Link>
                     <nav className="flex flex-col space-y-4 mb-8">
                       {navLinks.map(link => <NavLink key={link.href} href={link.href}>{link.label}</NavLink>)}
