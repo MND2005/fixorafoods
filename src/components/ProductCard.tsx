@@ -18,7 +18,7 @@ interface ProductCardProps {
 export function ProductCard({ product }: ProductCardProps) {
   const category = categories.find((c) => c.id === product.categoryId);
   const plugin = React.useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
-  const isService = 'benefits' in product;
+  const isService = product.categoryId === 'consultancy-services';
   const imageClassName = isService ? "object-cover" : "object-contain";
 
   return (
