@@ -39,13 +39,13 @@ export default function ProductDetailPage({ params }: { params: { id:string } })
         <div className="container mx-auto px-4 py-12">
             <div className="grid md:grid-cols-2 gap-12 items-start">
                 <div>
-                     <div className="relative aspect-video rounded-lg overflow-hidden border shadow-lg">
+                     <div className="relative aspect-video rounded-lg overflow-hidden border shadow-lg bg-white">
                         <Image
                         src={service.imageUrl}
                         alt={service.name}
                         data-ai-hint={service.imageHint}
                         fill
-                        className="object-cover"
+                        className="object-contain"
                         />
                     </div>
                 </div>
@@ -105,7 +105,7 @@ export default function ProductDetailPage({ params }: { params: { id:string } })
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div>
-            <Carousel className="rounded-lg overflow-hidden border shadow-lg">
+            <Carousel className="rounded-lg overflow-hidden border shadow-lg bg-white">
               <CarouselContent>
                 {product.imageUrls.map((url, index) => (
                   <CarouselItem key={index}>
@@ -115,7 +115,7 @@ export default function ProductDetailPage({ params }: { params: { id:string } })
                         alt={`${product.name} image ${index + 1}`}
                         data-ai-hint={product.imageHints[index]}
                         fill
-                        className="object-cover"
+                        className="object-contain"
                       />
                     </div>
                   </CarouselItem>

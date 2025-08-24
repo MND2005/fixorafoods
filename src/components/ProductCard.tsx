@@ -34,13 +34,13 @@ export function ProductCard({ product }: ProductCardProps) {
               {product.imageUrls.map((url, index) => (
                 <CarouselItem key={index}>
                   <Link href={`/products/${product.id}`} className="block">
-                    <div className="aspect-square relative w-full">
+                    <div className="aspect-square relative w-full bg-white">
                       <Image
                         src={url}
                         alt={`${product.name} image ${index + 1}`}
                         data-ai-hint={product.imageHints ? product.imageHints[index] : ''}
                         fill
-                        className="object-cover"
+                        className="object-contain"
                       />
                     </div>
                   </Link>
@@ -50,13 +50,13 @@ export function ProductCard({ product }: ProductCardProps) {
           </Carousel>
         ) : (
              <Link href={`/products/${product.id}`} className="block">
-              <div className="aspect-square relative w-full">
+              <div className="aspect-square relative w-full bg-white">
                 <Image
                   src={product.imageUrl}
                   alt={product.name}
                   data-ai-hint={product.imageHint}
                   fill
-                  className="object-cover"
+                  className="object-contain"
                 />
               </div>
             </Link>
