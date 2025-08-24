@@ -19,6 +19,7 @@ export function ProductCard({ product }: ProductCardProps) {
   const category = categories.find((c) => c.id === product.categoryId);
   const plugin = React.useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
   const isService = 'benefits' in product;
+  const imageClassName = isService ? "object-cover" : "object-contain";
 
   return (
     <Card className="flex flex-col h-full overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
@@ -40,7 +41,7 @@ export function ProductCard({ product }: ProductCardProps) {
                         alt={`${product.name} image ${index + 1}`}
                         data-ai-hint={product.imageHints ? product.imageHints[index] : ''}
                         fill
-                        className="object-contain"
+                        className={imageClassName}
                       />
                     </div>
                   </Link>
@@ -56,7 +57,7 @@ export function ProductCard({ product }: ProductCardProps) {
                   alt={product.name}
                   data-ai-hint={product.imageHint}
                   fill
-                  className="object-contain"
+                  className={imageClassName}
                 />
               </div>
             </Link>

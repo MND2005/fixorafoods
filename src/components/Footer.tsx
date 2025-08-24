@@ -10,7 +10,7 @@ export function Footer() {
           
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center mb-4">
-               <Image src="https://i.ibb.co/3kC6C69/fixora-logo.png" alt="Fixora Logo" width={150} height={50} />
+               <Image src="/images/fixora-logo.png" alt="Fixora Logo" width={150} height={50} />
             </div>
             <p className="text-muted-foreground max-w-md">
               At Leo Foods (Pvt) Limited, we are committed to nourishing lives through a wide range of trusted, nutritious, and high-quality products and services.

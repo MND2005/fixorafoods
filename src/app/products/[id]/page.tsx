@@ -47,7 +47,7 @@ export default function ProductDetailPage({ params }: { params: { id:string } })
                         alt={service.name}
                         data-ai-hint={service.imageHint}
                         fill
-                        className="object-contain"
+                        className="object-cover"
                         />
                     </div>
                 </div>
