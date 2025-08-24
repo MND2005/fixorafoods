@@ -12,8 +12,10 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { CheckCircle, Package, Star } from 'lucide-react';
+import { CheckCircle, Package, Star, ShoppingCart } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 export async function generateStaticParams() {
   const productIds = products.map((product) => ({
@@ -92,6 +94,12 @@ export default function ProductDetailPage({ params }: { params: { id:string } })
                             </CardContent>
                         </Card>
                     )}
+                    <Button asChild size="lg" className="w-full">
+                        <Link href="/contact">
+                            <ShoppingCart className="mr-2 h-5 w-5" />
+                            Order Now
+                        </Link>
+                    </Button>
                 </div>
             </div>
         </div>
@@ -109,7 +117,7 @@ export default function ProductDetailPage({ params }: { params: { id:string } })
               <CarouselContent>
                 {product.imageUrls.map((url, index) => (
                   <CarouselItem key={index}>
-                    <div className="relative aspect-square">
+                    <div className="aspect-square relative">
                       <Image
                         src={url}
                         alt={`${product.name} image ${index + 1}`}
@@ -138,6 +146,13 @@ export default function ProductDetailPage({ params }: { params: { id:string } })
             <div className="prose prose-lg max-w-none text-muted-foreground">
               <p>{product.longDescription}</p>
             </div>
+
+            <Button asChild size="lg" className="w-full">
+              <Link href="/contact">
+                  <ShoppingCart className="mr-2 h-5 w-5" />
+                  Order Now
+              </Link>
+            </Button>
             
             <Card>
               <CardHeader>
