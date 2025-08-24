@@ -13,7 +13,7 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel"
 import Autoplay from 'embla-carousel-autoplay';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 
 export default function Home() {
   const plugin = React.useRef(Autoplay({ delay: 4000, stopOnInteraction: false }));
@@ -116,12 +116,12 @@ export default function Home() {
              <h3 className="text-2xl font-headline font-bold text-center mb-10">Consultancy & Support</h3>
              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {services.map((service) => (
-                    <Card key={service.id}>
+                    <Card key={service.id} className="flex flex-col">
                         <CardHeader>
                             <Briefcase className="w-10 h-10 text-primary mb-2" />
                             <CardTitle>{service.name}</CardTitle>
                         </CardHeader>
-                        <CardContent>
+                        <CardContent className="flex-grow">
                             <p className="text-muted-foreground">{service.description}</p>
                             {service.offerings && (
                                 <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
@@ -131,6 +131,11 @@ export default function Home() {
                                 </ul>
                             )}
                         </CardContent>
+                        <CardFooter>
+                            <Button asChild className="w-full">
+                                <Link href={`/products/${service.id}`}>View Details</Link>
+                            </Button>
+                        </CardFooter>
                     </Card>
                 ))}
              </div>
