@@ -167,7 +167,7 @@ export default function CareersPage() {
             <h2 className="text-2xl font-bold font-headline mb-4">Don't See a Fit? Get in Touch!</h2>
             <p className="text-muted-foreground mb-6 max-w-xl mx-auto">We are always looking for talented individuals. If you're passionate about the food industry, send us your resume and tell us how you can contribute to our mission.</p>
             <Button asChild size="lg">
-                <Link href="mailto:hr@fixorafoods.com">
+                <Link href="mailto:info@fixorafood.lk">
                     <Mail className="mr-2 h-5 w-5" />
                     Send Your Resume
                 </Link>

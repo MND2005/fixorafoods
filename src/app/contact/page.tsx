@@ -35,7 +35,7 @@ export default function ContactPage() {
                     <Mail className="h-6 w-6 mr-4 mt-1 text-primary flex-shrink-0" />
                     <div>
                       <h3 className="font-bold">Email</h3>
-                      <a href="mailto:info@leofoods.com" className="text-muted-foreground hover:text-primary transition-colors">info@leofoods.com</a>
+                      <a href="mailto:info@fixorafood.lk" className="text-muted-foreground hover:text-primary transition-colors">info@fixorafood.lk</a>
                     </div>
                   </div>
                   <div className="flex items-start">

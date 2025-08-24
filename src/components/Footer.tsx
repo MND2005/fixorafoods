@@ -37,7 +37,7 @@ export function Footer() {
               </div>
               <div className="flex items-center">
                 <Mail className="h-5 w-5 mr-3 text-primary" />
-                <a href="mailto:info@leofoods.com" className="hover:text-primary transition-colors">info@leofoods.com</a>
+                <a href="mailto:info@fixorafood.lk" className="hover:text-primary transition-colors">info@fixorafood.lk</a>
               </div>
               <div className="mt-4">
                  <h4 className="font-semibold text-foreground mb-2">Coming Soon</h4>
