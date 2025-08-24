@@ -13,7 +13,7 @@ export function Footer() {
                <Image src="/images/fixora-logo.png" alt="Fixora Logo" width={150} height={50} />
             </div>
             <p className="text-muted-foreground max-w-md">
-              At Leo Foods (Pvt) Limited, we are committed to nourishing lives through a wide range of trusted, nutritious, and high-quality products and services.
+              At Fixora Food (Pvt) Ltd, we are committed to nourishing lives through a wide range of trusted, nutritious, and high-quality products and services.
             </p>
           </div>
 
@@ -49,7 +49,7 @@ export function Footer() {
         </div>
         
         <div className="mt-12 border-t border-white/20 pt-6 text-center text-sm">
-          <p>&copy; {new Date().getFullYear()} Fixora Foods (Pvt) Limited. All rights reserved. | Healthy Foods, Happy Lives</p>
+          <p>&copy; {new Date().getFullYear()} Fixora Food (Pvt) Ltd. All rights reserved. | Healthy Foods, Happy Lives</p>
           <p className="mt-1">Powered By Cosmo Solutions Pvt Ltd</p>
         </div>
       </div>
