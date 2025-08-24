@@ -64,6 +64,12 @@ const nextConfig: NextConfig = {
         hostname: 'resourcewebsite.singoo.cc',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.acquisition-international.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },

@@ -10,7 +10,7 @@ export default function CareersPage() {
     <div className="bg-background">
       <section className="relative w-full h-64 md:h-80">
         <Image
-          src="https://www.zwirnerequipment.com/images/headers/about-us-header.jpg"
+          src="https://www.acquisition-international.com/wp-content/uploads/2023/03/AdobeStock_576980630-2.jpg"
           alt="Team of people collaborating"
           fill
           className="object-cover z-0"
