@@ -1,80 +1,104 @@
-import { Award, BrainCircuit, Building, GraduationCap, Handshake, HeartHandshake, Leaf, Lightbulb, Mail, MapPin, Recycle, TrendingUp, UserCheck, Users } from 'lucide-react';
+import { Award, BrainCircuit, Building, GraduationCap, Handshake, HeartHandshake, Leaf, Lightbulb, Mail, TrendingUp, UserCheck, Users } from 'lucide-react';
 import Image from 'next/image';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function CareersPage() {
   return (
     <div className="bg-background">
-      <section className="relative w-full h-64">
+      <section className="relative w-full h-64 md:h-80">
         <Image
-          src="https://dairyconsultant.co.uk/images/photos/photo1.png"
+          src="https://www.zwirnerequipment.com/images/headers/about-us-header.jpg"
           alt="Team of people collaborating"
-          layout="fill"
-          objectFit="cover"
-          className="z-0"
+          fill
+          className="object-cover z-0"
           data-ai-hint="team collaboration"
+          priority
         />
         <div className="absolute inset-0 bg-black/60 z-10" />
         <div className="relative z-20 flex flex-col items-center justify-center h-full text-center text-white p-4">
-          <h1 className="text-4xl md:text-5xl font-bold font-headline drop-shadow-lg">Careers at Fixora food solutions ( pvt) ltd</h1>
-          <p className="text-xl md:text-2xl mt-2 drop-shadow-md font-body">Join our team and be part of a culture that values dedication, teamwork, and excellence. Great food starts with great people.</p>
+          <h1 className="text-4xl md:text-5xl font-bold font-headline drop-shadow-lg">Careers at Fixora Food Solutions</h1>
+          <p className="text-xl md:text-2xl mt-2 drop-shadow-md font-body">Great food starts with great people. Join our mission.</p>
         </div>
       </section>
 
-      <div className="container mx-auto px-4 py-12 md:py-16">
-        <div className="max-w-4xl mx-auto">
+      <div className="container mx-auto px-4 py-12 md:py-20">
+        <div className="max-w-5xl mx-auto space-y-16">
 
-          <section className="mb-12 text-center">
-            <h2 className="text-3xl font-bold font-headline mb-4">Building the Future of Food Together</h2>
-            <p className="text-lg text-muted-foreground">
-              At Fixora food solutions ( pvt) ltd, we believe that great food starts with great people. Our team is the heart of everything we do, from crafting delicious products to delivering exceptional service.
+          <section className="text-center">
+            <h2 className="text-3xl font-bold font-headline mb-4 text-primary">Build the Future of Food With Us</h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              At Fixora Food Solutions, we believe our team is the heart of our success. We're looking for passionate, innovative, and dedicated individuals to help us craft delicious products and deliver exceptional service.
             </p>
           </section>
 
-          <section className="mb-12">
-             <h2 className="text-3xl font-bold font-headline text-center mb-8">Life at Fixora food solutions ( pvt) ltd</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
-              <div className="flex flex-col items-center">
-                <Users className="w-12 h-12 text-primary mb-3" />
-                <h3 className="text-xl font-bold">Collaborative Environment</h3>
-                <p className="text-muted-foreground mt-1">Work alongside passionate colleagues who support and inspire each other.</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <GraduationCap className="w-12 h-12 text-primary mb-3" />
-                <h3 className="text-xl font-bold">Continuous Learning</h3>
-                <p className="text-muted-foreground mt-1">We invest in your development through training, workshops, and career advancement programs.</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <Lightbulb className="w-12 h-12 text-primary mb-3" />
-                <h3 className="text-xl font-bold">Innovation Driven</h3>
-                <p className="text-muted-foreground mt-1">We encourage creativity and fresh ideas to make a real impact.</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <HeartHandshake className="w-12 h-12 text-primary mb-3" />
-                <h3 className="text-xl font-bold">Work-Life Balance</h3>
-                <p className="text-muted-foreground mt-1">Flexible work arrangements and wellness initiatives to help you thrive.</p>
-              </div>
-               <div className="flex flex-col items-center">
-                <Building className="w-12 h-12 text-primary mb-3" />
-                <h3 className="text-xl font-bold">Community Focus</h3>
-                <p className="text-muted-foreground mt-1">Participate in company-led social responsibility projects that give back.</p>
-              </div>
-               <div className="flex flex-col items-center">
-                <TrendingUp className="w-12 h-12 text-primary mb-3" />
-                <h3 className="text-xl font-bold">Career Growth</h3>
-                <p className="text-muted-foreground mt-1">Clear career progression paths and opportunities to advance within the organization.</p>
-              </div>
+          <section>
+             <h2 className="text-3xl font-bold font-headline text-center mb-10 text-primary">Life at Fixora</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <Card className="text-center">
+                <CardHeader>
+                  <Users className="w-12 h-12 text-accent mx-auto mb-3" />
+                  <CardTitle className="text-xl">Collaborative Environment</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">Work alongside passionate colleagues who support and inspire each other.</p>
+                </CardContent>
+              </Card>
+              <Card className="text-center">
+                <CardHeader>
+                  <TrendingUp className="w-12 h-12 text-accent mx-auto mb-3" />
+                  <CardTitle className="text-xl">Career Growth</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">We invest in your development through training, workshops, and advancement programs.</p>
+                </CardContent>
+              </Card>
+              <Card className="text-center">
+                <CardHeader>
+                  <Lightbulb className="w-12 h-12 text-accent mx-auto mb-3" />
+                  <CardTitle className="text-xl">Innovation Driven</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">We encourage creativity and fresh ideas to make a real impact on the food industry.</p>
+                </CardContent>
+              </Card>
+              <Card className="text-center">
+                 <CardHeader>
+                    <HeartHandshake className="w-12 h-12 text-accent mx-auto mb-3" />
+                    <CardTitle className="text-xl">Work-Life Balance</CardTitle>
+                 </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">Flexible work arrangements and wellness initiatives to help you thrive in and out of work.</p>
+                </CardContent>
+              </Card>
+               <Card className="text-center">
+                 <CardHeader>
+                    <Building className="w-12 h-12 text-accent mx-auto mb-3" />
+                    <CardTitle className="text-xl">Community Focus</CardTitle>
+                 </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">Participate in company-led social responsibility projects that give back to our community.</p>
+                </CardContent>
+              </Card>
+               <Card className="text-center">
+                 <CardHeader>
+                    <GraduationCap className="w-12 h-12 text-accent mx-auto mb-3" />
+                    <CardTitle className="text-xl">Continuous Learning</CardTitle>
+                 </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">Stay ahead of the curve with access to the latest industry knowledge and skill development.</p>
+                </CardContent>
+              </Card>
             </div>
           </section>
 
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold font-headline text-center mb-8">Our Values</h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10">
+          <section className="bg-muted p-8 rounded-lg">
+            <h2 className="text-3xl font-bold font-headline text-center mb-10 text-primary">Our Core Values</h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
+                <div className="flex-shrink-0 bg-primary/10 p-3 rounded-full">
                     <Award className="w-8 h-8 text-primary"/>
                 </div>
                 <div>
@@ -83,7 +107,7 @@ export default function CareersPage() {
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
+                <div className="flex-shrink-0 bg-primary/10 p-3 rounded-full">
                     <Leaf className="w-8 h-8 text-primary"/>
                 </div>
                 <div>
@@ -92,7 +116,7 @@ export default function CareersPage() {
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
+                <div className="flex-shrink-0 bg-primary/10 p-3 rounded-full">
                     <UserCheck className="w-8 h-8 text-primary"/>
                 </div>
                 <div>
@@ -101,16 +125,7 @@ export default function CareersPage() {
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
-                    <Recycle className="w-8 h-8 text-primary"/>
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold">Sustainability</h3>
-                  <p className="mt-1 text-muted-foreground">We are dedicated to environmentally responsible practices.</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
+                 <div className="flex-shrink-0 bg-primary/10 p-3 rounded-full">
                     <BrainCircuit className="w-8 h-8 text-primary"/>
                 </div>
                 <div>
@@ -119,24 +134,24 @@ export default function CareersPage() {
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
+                <div className="flex-shrink-0 bg-primary/10 p-3 rounded-full">
                     <Handshake className="w-8 h-8 text-primary"/>
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold">Diversity, Equity & Inclusion</h3>
+                  <h3 className="text-lg font-bold">Diversity & Inclusion</h3>
                   <p className="mt-1 text-muted-foreground">We foster an inclusive environment that values diverse perspectives.</p>
                 </div>
               </div>
             </div>
           </section>
 
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold font-headline text-center mb-8">Current Opportunities</h2>
-            <Card className="bg-muted">
+          <section>
+            <h2 className="text-3xl font-bold font-headline text-center mb-8 text-primary">Current Opportunities</h2>
+            <Card>
               <CardContent className="p-8 text-center">
-                <h3 className="text-2xl font-bold font-headline mb-2">Exciting Opportunities Coming Soon</h3>
-                <p className="text-muted-foreground mb-6">As we continue to grow and expand our operations, we'll be opening new positions across various departments. Stay tuned for opportunities in engineering, sales, marketing, operations, and more.</p>
-                <div className="flex flex-wrap justify-center gap-2">
+                <h3 className="text-2xl font-bold font-headline mb-4">Exciting Roles Coming Soon</h3>
+                <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">As we continue to grow and expand our operations, we'll be opening new positions across various departments. Stay tuned for opportunities in engineering, sales, marketing, operations, and more.</p>
+                <div className="flex flex-wrap justify-center gap-3">
                     <Badge variant="secondary">Engineering</Badge>
                     <Badge variant="secondary">Sales & Marketing</Badge>
                     <Badge variant="secondary">Operations</Badge>
@@ -149,16 +164,14 @@ export default function CareersPage() {
           </section>
           
           <section className="text-center bg-card border p-8 rounded-lg shadow-sm">
-            <h2 className="text-2xl font-bold font-headline mb-2">Ready to Join Our Team?</h2>
-            <p className="text-muted-foreground mb-6">Even if you don't see a perfect match right now, we'd love to hear from you. Send us your resume and let us know how you'd like to contribute to our mission.</p>
-            <div className="flex justify-center gap-4">
-                <Button asChild size="lg">
-                    <Link href="mailto:hr@fixorafoods.com">
-                        <Mail className="mr-2 h-5 w-5" />
-                        Send Your Resume
-                    </Link>
-                </Button>
-            </div>
+            <h2 className="text-2xl font-bold font-headline mb-4">Don't See a Fit? Get in Touch!</h2>
+            <p className="text-muted-foreground mb-6 max-w-xl mx-auto">We are always looking for talented individuals. If you're passionate about the food industry, send us your resume and tell us how you can contribute to our mission.</p>
+            <Button asChild size="lg">
+                <Link href="mailto:hr@fixorafoods.com">
+                    <Mail className="mr-2 h-5 w-5" />
+                    Send Your Resume
+                </Link>
+            </Button>
           </section>
 
         </div>
@@ -166,3 +179,5 @@ export default function CareersPage() {
     </div>
   );
 }
+
+    
