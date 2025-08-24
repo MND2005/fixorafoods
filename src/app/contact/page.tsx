@@ -59,7 +59,9 @@ export default function ContactPage() {
               <CardTitle className="font-headline text-2xl">Send Us a Message</CardTitle>
             </CardHeader>
             <CardContent>
-              <ContactForm />
+              <div className="flex items-center justify-center h-full min-h-[300px] bg-muted/50 rounded-lg">
+                <p className="text-muted-foreground font-medium text-lg">Contact form coming soon!</p>
+              </div>
             </CardContent>
           </Card>
         </div>
