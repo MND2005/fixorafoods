@@ -15,46 +15,48 @@ export default function ContactPage() {
         </section>
 
         <div className="grid md:grid-cols-2 gap-12">
-          <div className="space-y-8">
-            <div>
-              <h2 className="text-2xl font-bold font-headline mb-2">Get In Touch</h2>
-              <p className="text-muted-foreground">
-                We'd love to hear from you. Whether you have questions about our products, need technical support, or want to explore business partnerships, our team is ready to assist.
-              </p>
-            </div>
-            <div className="space-y-4">
-              <div className="flex items-start">
-                <MapPin className="h-6 w-6 mr-4 mt-1 text-primary flex-shrink-0" />
-                <div>
-                  <h3 className="font-bold">Address</h3>
-                  <p className="text-muted-foreground">127/10, Mattegoda<br />Kottawa, Sri Lanka</p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <Mail className="h-6 w-6 mr-4 mt-1 text-primary flex-shrink-0" />
-                <div>
-                  <h3 className="font-bold">Email</h3>
-                  <a href="mailto:info@leofoods.com" className="text-muted-foreground hover:text-primary transition-colors">info@leofoods.com</a>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <Phone className="h-6 w-6 mr-4 mt-1 text-primary flex-shrink-0" />
-                <div>
-                  <h3 className="font-bold">Phone</h3>
-                  <p className="text-muted-foreground">Coming Soon</p>
-                </div>
-              </div>
-               <div className="flex items-start">
-                <MessageSquare className="h-6 w-6 mr-4 mt-1 text-primary flex-shrink-0" />
-                <div>
-                  <h3 className="font-bold">WhatsApp</h3>
-                  <p className="text-muted-foreground">Coming Soon</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
           <Card className="shadow-lg">
+            <CardHeader>
+                <CardTitle className="font-headline text-2xl">Get In Touch</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-8">
+                <p className="text-muted-foreground">
+                    We'd love to hear from you. Whether you have questions about our products, need technical support, or want to explore business partnerships, our team is ready to assist.
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-start">
+                    <MapPin className="h-6 w-6 mr-4 mt-1 text-primary flex-shrink-0" />
+                    <div>
+                      <h3 className="font-bold">Address</h3>
+                      <p className="text-muted-foreground">127/10, Mattegoda<br />Kottawa, Sri Lanka</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <Mail className="h-6 w-6 mr-4 mt-1 text-primary flex-shrink-0" />
+                    <div>
+                      <h3 className="font-bold">Email</h3>
+                      <a href="mailto:info@leofoods.com" className="text-muted-foreground hover:text-primary transition-colors">info@leofoods.com</a>
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <Phone className="h-6 w-6 mr-4 mt-1 text-primary flex-shrink-0" />
+                    <div>
+                      <h3 className="font-bold">Phone</h3>
+                      <p className="text-muted-foreground">Coming Soon</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <MessageSquare className="h-6 w-6 mr-4 mt-1 text-primary flex-shrink-0" />
+                    <div>
+                      <h3 className="font-bold">WhatsApp</h3>
+                      <p className="text-muted-foreground">Coming Soon</p>
+                    </div>
+                  </div>
+                </div>
+            </CardContent>
+          </Card>
+
+          <Card>
             <CardHeader>
               <CardTitle className="font-headline text-2xl">Send Us a Message</CardTitle>
             </CardHeader>
