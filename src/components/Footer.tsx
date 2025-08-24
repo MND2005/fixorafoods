@@ -50,6 +50,7 @@ export function Footer() {
         
         <div className="mt-12 border-t border-white/20 pt-6 text-center text-sm">
           <p>&copy; {new Date().getFullYear()} Fixora Foods (Pvt) Limited. All rights reserved. | Healthy Foods, Happy Lives</p>
+          <p className="mt-1">Powered By Cosmo Solutions Pvt Ltd</p>
         </div>
       </div>
     </footer>
