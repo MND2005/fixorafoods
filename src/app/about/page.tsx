@@ -136,7 +136,7 @@ export default function AboutPage() {
             <div className="flex flex-wrap justify-center gap-3 md:gap-4">
               <div className="bg-secondary text-secondary-foreground rounded-full px-5 py-2 font-medium text-sm md:text-base">Dairy Machinery, Equipment & Accessories</div>
               <div className="bg-secondary text-secondary-foreground rounded-full px-5 py-2 font-medium text-sm md:text-base">Business Consultancy for Food Entrepreneurs</div>
-              <div className="bg-secondary text-secondary-foreground rounded-full px-5 py-2 font-medium text-sm md:text-base">Dairy Products, Juices, Jams & Sauces</div>
+              
             </div>
           </section>
 
