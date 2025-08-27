@@ -51,7 +51,7 @@ export default function AboutPage() {
           </section>
           
           <section className="bg-muted p-8 rounded-lg">
-            <h2 className="text-3xl font-bold font-headline text-center mb-8 text-primary">Our Core Pillars</h2>
+            <h2 className="text-3xl font-bold font-headline text-center mb-8" style={{color: 'hsl(var(--primary))'}}>Our Core Pillars</h2>
             <div className="grid md:grid-cols-3 gap-8 text-center">
               <div className="flex flex-col items-center">
                 <ShieldCheck className="w-12 h-12 text-accent mb-3" />
@@ -72,7 +72,7 @@ export default function AboutPage() {
           </section>
           
           <section>
-            <h2 className="text-3xl font-bold font-headline text-center mb-10 text-primary">Our Values</h2>
+            <h2 className="text-3xl font-bold font-headline text-center mb-10" style={{color: 'hsl(var(--primary))'}}>Our Values</h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0 bg-primary/10 p-3 rounded-full">
@@ -132,7 +132,7 @@ export default function AboutPage() {
           </section>
 
           <section className="text-center">
-            <h2 className="text-3xl font-bold font-headline mb-6 text-primary">Our Offerings</h2>
+            <h2 className="text-3xl font-bold font-headline mb-6" style={{color: 'hsl(var(--primary))'}}>Our Offerings</h2>
             <div className="flex flex-wrap justify-center gap-3 md:gap-4">
               <div className="bg-secondary text-secondary-foreground rounded-full px-5 py-2 font-medium text-sm md:text-base">Dairy Machinery, Equipment & Accessories</div>
               <div className="bg-secondary text-secondary-foreground rounded-full px-5 py-2 font-medium text-sm md:text-base">Business Consultancy for Food Entrepreneurs</div>
