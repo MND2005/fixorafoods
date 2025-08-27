@@ -99,7 +99,7 @@ export default function CareersPage() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0 bg-primary/10 p-3 rounded-full">
-                    <Award className="w-8 h-8 text-primary"/>
+                    <Award className="w-8 h-8 text-accent"/>
                 </div>
                 <div>
                   <h3 className="text-lg font-bold">Integrity</h3>
@@ -108,7 +108,7 @@ export default function CareersPage() {
               </div>
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0 bg-primary/10 p-3 rounded-full">
-                    <Leaf className="w-8 h-8 text-primary"/>
+                    <Leaf className="w-8 h-8 text-accent"/>
                 </div>
                 <div>
                   <h3 className="text-lg font-bold">Quality</h3>
@@ -117,7 +117,7 @@ export default function CareersPage() {
               </div>
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0 bg-primary/10 p-3 rounded-full">
-                    <UserCheck className="w-8 h-8 text-primary"/>
+                    <UserCheck className="w-8 h-8 text-accent"/>
                 </div>
                 <div>
                   <h3 className="text-lg font-bold">Customer Centricity</h3>
@@ -126,7 +126,7 @@ export default function CareersPage() {
               </div>
               <div className="flex items-start space-x-4">
                  <div className="flex-shrink-0 bg-primary/10 p-3 rounded-full">
-                    <BrainCircuit className="w-8 h-8 text-primary"/>
+                    <BrainCircuit className="w-8 h-8 text-accent"/>
                 </div>
                 <div>
                   <h3 className="text-lg font-bold">Innovation</h3>
@@ -135,7 +135,7 @@ export default function CareersPage() {
               </div>
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0 bg-primary/10 p-3 rounded-full">
-                    <Handshake className="w-8 h-8 text-primary"/>
+                    <Handshake className="w-8 h-8 text-accent"/>
                 </div>
                 <div>
                   <h3 className="text-lg font-bold">Diversity & Inclusion</h3>
@@ -179,5 +179,4 @@ export default function CareersPage() {
     </div>
   );
 }
-
     

@@ -30,7 +30,7 @@ export default function FoodsPage() {
           <section className="grid md:grid-cols-2 gap-8">
             <div className="bg-card p-6 rounded-lg border">
                 <div className="flex items-center mb-4">
-                    <Milk className="w-8 h-8 text-primary mr-4" />
+                    <Milk className="w-8 h-8 text-accent mr-4" />
                     <h3 className="text-2xl font-bold font-headline">Fresh & Processed Dairy Products</h3>
                 </div>
                 <ul className="space-y-2 list-disc list-inside text-muted-foreground">
@@ -45,7 +45,7 @@ export default function FoodsPage() {
             </div>
              <div className="bg-card p-6 rounded-lg border">
                  <div className="flex items-center mb-4">
-                    <GlassWater className="w-8 h-8 text-primary mr-4" />
+                    <GlassWater className="w-8 h-8 text-accent mr-4" />
                     <h3 className="text-2xl font-bold font-headline">Natural Fruit Juices</h3>
                 </div>
                 <ul className="space-y-2 list-disc list-inside text-muted-foreground">
@@ -57,7 +57,7 @@ export default function FoodsPage() {
             </div>
             <div className="bg-card p-6 rounded-lg border col-span-1 md:col-span-2">
                  <div className="flex items-center mb-4">
-                    <UtensilsCrossed className="w-8 h-8 text-primary mr-4" />
+                    <UtensilsCrossed className="w-8 h-8 text-accent mr-4" />
                     <h3 className="text-2xl font-bold font-headline">Jams and Sauces</h3>
                 </div>
                 <div className="grid md:grid-cols-2 gap-x-8">

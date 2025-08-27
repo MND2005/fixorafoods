@@ -25,28 +25,28 @@ export default function ContactPage() {
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-start">
-                    <MapPin className="h-6 w-6 mr-4 mt-1 text-primary flex-shrink-0" />
+                    <MapPin className="h-6 w-6 mr-4 mt-1 text-accent flex-shrink-0" />
                     <div>
                       <h3 className="font-bold">Address</h3>
                       <p className="text-muted-foreground">127/10, Mattegoda<br />Kottawa, Sri Lanka</p>
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <Mail className="h-6 w-6 mr-4 mt-1 text-primary flex-shrink-0" />
+                    <Mail className="h-6 w-6 mr-4 mt-1 text-accent flex-shrink-0" />
                     <div>
                       <h3 className="font-bold">Email</h3>
                       <a href="mailto:info@fixorafood.lk" className="text-muted-foreground hover:text-primary transition-colors">info@fixorafood.lk</a>
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <Phone className="h-6 w-6 mr-4 mt-1 text-primary flex-shrink-0" />
+                    <Phone className="h-6 w-6 mr-4 mt-1 text-accent flex-shrink-0" />
                     <div>
                       <h3 className="font-bold">Phone</h3>
                       <p className="text-muted-foreground">Coming Soon</p>
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <MessageSquare className="h-6 w-6 mr-4 mt-1 text-primary flex-shrink-0" />
+                    <MessageSquare className="h-6 w-6 mr-4 mt-1 text-accent flex-shrink-0" />
                     <div>
                       <h3 className="font-bold">WhatsApp</h3>
                       <p className="text-muted-foreground">Coming Soon</p>

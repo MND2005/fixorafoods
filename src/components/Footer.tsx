@@ -32,11 +32,11 @@ export function Footer() {
             <h3 className="font-bold text-lg mb-4 font-headline">Contact Info</h3>
             <div className="space-y-3 text-muted-foreground">
               <div className="flex items-start">
-                <MapPin className="h-5 w-5 mr-3 mt-1 flex-shrink-0 text-primary" />
+                <MapPin className="h-5 w-5 mr-3 mt-1 flex-shrink-0 text-accent" />
                 <span>127/10, Mattegoda, Kottawa, Sri Lanka</span>
               </div>
               <div className="flex items-center">
-                <Mail className="h-5 w-5 mr-3 text-primary" />
+                <Mail className="h-5 w-5 mr-3 text-accent" />
                 <a href="mailto:info@fixorafood.lk" className="hover:text-primary transition-colors">info@fixorafood.lk</a>
               </div>
               <div className="mt-4">

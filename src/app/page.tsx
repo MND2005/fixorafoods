@@ -76,21 +76,21 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-1 gap-6">
                <div className="flex items-start space-x-4">
-                  <ShieldCheck className="w-10 h-10 text-primary mt-1 flex-shrink-0" />
+                  <ShieldCheck className="w-10 h-10 text-accent mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="text-xl font-bold">Safety First</h3>
                     <p className="text-muted-foreground mt-1">Ensuring the highest safety standards in all our products and services.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <Heart className="w-10 h-10 text-primary mt-1 flex-shrink-0" />
+                  <Heart className="w-10 h-10 text-accent mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="text-xl font-bold">Nutritional Excellence</h3>
                     <p className="text-muted-foreground mt-1">Delivering products that contribute to healthy and balanced nutrition.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <Lightbulb className="w-10 h-10 text-primary mt-1 flex-shrink-0" />
+                  <Lightbulb className="w-10 h-10 text-accent mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="text-xl font-bold">Continuous Innovation</h3>
                     <p className="text-muted-foreground mt-1">Embracing new technologies and methods to improve our offerings.</p>
@@ -118,7 +118,7 @@ export default function Home() {
                 {services.map((service) => (
                     <Card key={service.id} className="flex flex-col">
                         <CardHeader>
-                            <Briefcase className="w-10 h-10 text-primary mb-2" />
+                            <Briefcase className="w-10 h-10 text-accent mb-2" />
                             <CardTitle>{service.name}</CardTitle>
                         </CardHeader>
                         <CardContent className="flex-grow">
@@ -126,7 +126,7 @@ export default function Home() {
                             {service.offerings && (
                                 <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
                                     {service.offerings.map((offering, index) => (
-                                        <li key={index} className="flex items-center"><CheckCircle className="w-4 h-4 mr-2 text-primary" />{offering}</li>
+                                        <li key={index} className="flex items-center"><CheckCircle className="w-4 h-4 mr-2 text-accent" />{offering}</li>
                                     ))}
                                 </ul>
                             )}
