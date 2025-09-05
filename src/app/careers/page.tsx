@@ -28,14 +28,14 @@ export default function CareersPage() {
         <div className="max-w-5xl mx-auto space-y-16">
 
           <section className="text-center">
-            <h2 className="text-3xl font-bold font-headline mb-4" style={{color: 'hsl(var(--primary))'}}>Build the Future of Food With Us</h2>
+            <h2 className="text-3xl font-bold font-headline mb-4" style={{color: 'hsl(var(--accent))'}}>Build the Future of Food With Us</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               At Fixora Food Solutions, we believe our team is the heart of our success. We're looking for passionate, innovative, and dedicated individuals to help us craft delicious products and deliver exceptional service.
             </p>
           </section>
 
           <section>
-             <h2 className="text-3xl font-bold font-headline text-center mb-10" style={{color: 'hsl(var(--primary))'}}>Life at Fixora</h2>
+             <h2 className="text-3xl font-bold font-headline text-center mb-10" style={{color: 'hsl(var(--accent))'}}>Life at Fixora</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <Card className="text-center">
                 <CardHeader>
@@ -95,7 +95,7 @@ export default function CareersPage() {
           </section>
 
           <section className="bg-muted p-8 rounded-lg">
-            <h2 className="text-3xl font-bold font-headline text-center mb-10" style={{color: 'hsl(var(--primary))'}}>Our Core Values</h2>
+            <h2 className="text-3xl font-bold font-headline text-center mb-10" style={{color: 'hsl(var(--accent))'}}>Our Core Values</h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0 bg-primary/10 p-3 rounded-full">
@@ -146,7 +146,7 @@ export default function CareersPage() {
           </section>
 
           <section>
-            <h2 className="text-3xl font-bold font-headline text-center mb-8" style={{color: 'hsl(var(--primary))'}}>Current Opportunities</h2>
+            <h2 className="text-3xl font-bold font-headline text-center mb-8" style={{color: 'hsl(var(--accent))'}}>Current Opportunities</h2>
             <Card>
               <CardContent className="p-8 text-center">
                 <h3 className="text-2xl font-bold font-headline mb-4">Exciting Roles Coming Soon</h3>
