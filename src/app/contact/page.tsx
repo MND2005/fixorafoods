@@ -71,8 +71,16 @@ export default function ContactPage() {
         <section className="mt-16 text-center bg-muted p-8 rounded-lg">
             <h2 className="text-2xl font-bold font-headline mb-2">Find Us</h2>
             <p className="text-muted-foreground mb-4">Visit our office in Kottawa, Sri Lanka</p>
-             <div className="bg-background border rounded-lg p-4 text-center">
-              <p className="font-medium">Interactive map coming soon</p>
+             <div className="aspect-video bg-background border rounded-lg overflow-hidden">
+                <iframe 
+                    src="https://maps.google.com/maps?q=6.8282819,79.965266&hl=es;z=14&amp;output=embed"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen={false}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
             </div>
              <p className="text-muted-foreground mt-4">127/10, Mattegoda, Kottawa, Sri Lanka</p>
         </section>
