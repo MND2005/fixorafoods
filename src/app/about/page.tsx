@@ -25,7 +25,7 @@ export default function AboutPage() {
         <div className="max-w-5xl mx-auto space-y-16">
           
           <section className="text-center">
-            <h2 className="text-3xl font-bold font-headline mb-4 text-primary">Our Story</h2>
+            <h2 className="text-3xl font-bold font-headline mb-4" style={{color: 'hsl(var(--accent))'}}>Our Story</h2>
             <p className="text-center text-muted-foreground text-lg max-w-4xl mx-auto">
               Fixora Food Solutions (Pvt) Ltd was founded with a clear mission: to deliver safe, nutritious, and innovative food solutions to every household. With a strong Sri Lankan heritage and a future-forward mindset, we proudly serve a growing range of products across the dairy, beverages, spices, and processed food categories. Fixora food solutions ( pvt) ltd is not just a brand; it's a promise of nourishment, reliability, and growth. Whether you're a customer, distributor, or business partner, we welcome you to join our journey toward a healthier tomorrow.
             </p>
@@ -34,7 +34,7 @@ export default function AboutPage() {
           <section className="grid md:grid-cols-2 gap-10 items-center">
              <Card>
               <CardHeader>
-                <CardTitle className="font-headline text-2xl">Our Vision</CardTitle>
+                <CardTitle className="font-headline text-2xl" style={{color: 'hsl(var(--accent))'}}>Our Vision</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">To be the most trusted food brand for healthy, quality food and reliable service.</p>
@@ -42,7 +42,7 @@ export default function AboutPage() {
             </Card>
             <Card>
               <CardHeader>
-                <CardTitle className="font-headline text-2xl">Our Mission</CardTitle>
+                <CardTitle className="font-headline text-2xl" style={{color: 'hsl(var(--accent))'}}>Our Mission</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">To provide nutritious, safe, and high-quality food and beverages through innovation, modern technology, and responsible practices, building trust with every product we deliver.</p>
@@ -51,7 +51,7 @@ export default function AboutPage() {
           </section>
           
           <section className="bg-muted p-8 rounded-lg">
-            <h2 className="text-3xl font-bold font-headline text-center mb-8" style={{color: 'hsl(var(--primary))'}}>Our Core Pillars</h2>
+            <h2 className="text-3xl font-bold font-headline text-center mb-8" style={{color: 'hsl(var(--accent))'}}>Our Core Pillars</h2>
             <div className="grid md:grid-cols-3 gap-8 text-center">
               <div className="flex flex-col items-center">
                 <ShieldCheck className="w-12 h-12 text-accent mb-3" />
@@ -72,7 +72,7 @@ export default function AboutPage() {
           </section>
           
           <section>
-            <h2 className="text-3xl font-bold font-headline text-center mb-10" style={{color: 'hsl(var(--primary))'}}>Our Values</h2>
+            <h2 className="text-3xl font-bold font-headline text-center mb-10" style={{color: 'hsl(var(--accent))'}}>Our Values</h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0 bg-primary/10 p-3 rounded-full">
@@ -132,7 +132,7 @@ export default function AboutPage() {
           </section>
 
           <section className="text-center">
-            <h2 className="text-3xl font-bold font-headline mb-6" style={{color: 'hsl(var(--primary))'}}>Our Offerings</h2>
+            <h2 className="text-3xl font-bold font-headline text-center mb-6" style={{color: 'hsl(var(--accent))'}}>Our Offerings</h2>
             <div className="flex flex-wrap justify-center gap-3 md:gap-4">
               <div className="bg-secondary text-secondary-foreground rounded-full px-5 py-2 font-medium text-sm md:text-base">Dairy Machinery, Equipment & Accessories</div>
               <div className="bg-secondary text-secondary-foreground rounded-full px-5 py-2 font-medium text-sm md:text-base">Business Consultancy for Food Entrepreneurs</div>
