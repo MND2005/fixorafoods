@@ -271,7 +271,96 @@ export const services: Service[] = [
         description: 'Providing expert guidance to help your business grow and thrive in the competitive food industry.',
         imageUrl: 'https://resourcewebsite.singoo.cc/wp-content/uploads/2021/04/service-1-1.jpg',
         imageHint: 'business development',
-        categoryId: 'consultancy-services'
+        categoryId: 'consultancy-services',
+        longDescription: (
+            <div className="prose prose-lg max-w-none text-muted-foreground">
+              <p className="lead">
+                Driving Growth. Empowering Innovation. Building Stronger Businesses.
+              </p>
+              <p>
+                At Fixora Food Solutions, we don’t just help businesses survive—we help them thrive. With our deep expertise in the food and dairy sectors, we provide Business Development Consultancy Services tailored to unlock new opportunities, strengthen operations, and guide your business toward sustainable growth in Sri Lanka and beyond.
+              </p>
+              <p>
+                We believe every challenge is an opportunity in disguise, and with the right strategies, ambitious businesses can turn potential into performance.
+              </p>
+          
+              <h3 className='text-primary-foreground'>How We Help Businesses Grow</h3>
+              <p>
+                At Fixora, we are more than consultants—we are growth partners. Our services are structured to cover the full spectrum of business development needs:
+              </p>
+              
+              <h4>1. Strategic Business Planning</h4>
+              <ul>
+                <li>Assessing your current business position.</li>
+                <li>Developing tailored strategies that align with your vision and goals.</li>
+                <li>Creating actionable roadmaps for growth, profitability, and market dominance.</li>
+              </ul>
+          
+              <h4>2. Market Expansion & Opportunity Identification</h4>
+              <ul>
+                <li>Identifying potential market segments in Sri Lanka and internationally.</li>
+                <li>Assessing distribution channels, export potential, and market entry strategies.</li>
+                <li>Competitor and market analysis to help you stay one step ahead.</li>
+              </ul>
+          
+              <h4>3. Process Improvement & Cost Optimization</h4>
+              <ul>
+                <li>Reviewing operational processes to reveal bottlenecks.</li>
+                <li>Designing solutions to minimize costs and maximize productivity.</li>
+                <li>Improving resource utilization for leaner, smarter business operations.</li>
+              </ul>
+          
+              <h4>4. Partnership & Network Development</h4>
+              <ul>
+                <li>Facilitating connections with reliable suppliers, financial partners, and technology providers.</li>
+                <li>Building collaborations that create win-win outcomes.</li>
+                <li>Helping businesses present themselves credibly to potential investors.</li>
+              </ul>
+          
+              <h4>5. Regulatory & Compliance Support</h4>
+              <ul>
+                <li>Guidance to ensure compliance with local regulations in Sri Lanka.</li>
+                <li>Support to align businesses with international food and dairy industry standards.</li>
+                <li>Preparing businesses for audits, certifications, and export requirements.</li>
+              </ul>
+          
+              <h3 className='text-primary-foreground'>Why Businesses Choose Fixora</h3>
+              <ul>
+                <li>🌟 <strong>Industry-Specific Expertise</strong> – With our foundation in dairy and food solutions, we know the unique challenges of these sectors.</li>
+                <li>🌟 <strong>Customized Solutions</strong> – Every business is different. We never provide cookie-cutter advice—we provide strategies designed to fit your story.</li>
+                <li>🌟 <strong>Future-Focused Approach</strong> – Our recommendations are built to ensure not just short-term gains, but long-term resilience.</li>
+                <li>🌟 <strong>Hands-On Support</strong> – From planning to execution, we’re right there with you, keeping things practical, measurable, and impactful.</li>
+              </ul>
+          
+              <h3 className='text-primary-foreground'>What You’ll Gain</h3>
+              <p>When you partner with Fixora Business Development Consultants, you can expect:</p>
+              <ul>
+                <li>Enhanced competitiveness in local and export markets</li>
+                <li>Improved operational efficiency and team productivity</li>
+                <li>Optimized financial performance through smarter strategies</li>
+                <li>Sustainable growth in a rapidly changing business landscape</li>
+              </ul>
+          
+              <h3 className='text-primary-foreground'>Industries We Serve</h3>
+              <p>While our core strength lies in the food and dairy sector, our consultancy expertise extends to:</p>
+              <ul>
+                <li>FMCG (Fast-Moving Consumer Goods)</li>
+                <li>Agribusiness & farm-based enterprises</li>
+                <li>Food processing and manufacturing facilities</li>
+                <li>Distribution and supply chain companies</li>
+              </ul>
+          
+              <h3 className='text-primary-foreground'>Success Made Simple—with Fixora by Your Side</h3>
+              <p>
+                Business development is not just about ideas—it’s about action and results. At Fixora, we bring the insights, tools, and partnerships to turn your vision into reality.
+              </p>
+          
+              <p className="font-bold">
+                📌 Ready to take your business to the next level?<br/>
+                We’d love to guide you on your growth journey.
+              </p>
+            </div>
+          )
     },
     {
         id: 's6',
@@ -285,4 +374,5 @@ export const services: Service[] = [
 
 
 export const newsArticles = [];
+
 

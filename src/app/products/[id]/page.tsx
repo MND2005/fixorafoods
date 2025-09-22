@@ -102,6 +102,14 @@ export default function ProductDetailPage({ params }: { params: { id:string } })
                     </Button>
                 </div>
             </div>
+             {service.longDescription && (
+                <div className="mt-12">
+                    <Separator />
+                    <div className="mt-12">
+                        {service.longDescription}
+                    </div>
+                </div>
+            )}
         </div>
     )
   }

@@ -20,6 +20,7 @@ export interface Service {
     id: string;
     name: string;
     description: string;
+    longDescription?: string | JSX.Element;
     imageUrl: string;
     imageHint: string;
     categoryId: string;
