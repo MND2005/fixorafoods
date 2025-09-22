@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
-import { products, services, categories } from '@/lib/data';
+import { products, services, categories } from '@/lib/data.tsx';
 import { Badge } from '@/components/ui/badge';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { ProductRecommendations } from '@/components/ProductRecommendations';

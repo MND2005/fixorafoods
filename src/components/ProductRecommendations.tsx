@@ -6,7 +6,7 @@ import { ProductCard } from './ProductCard';
 import { Skeleton } from './ui/skeleton';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import type { Product as ProductType } from '@/lib/types';
-import { categories } from '@/lib/data';
+import { categories } from '@/lib/data.tsx';
 
 interface ProductRecommendationsProps {
   product: ProductType;

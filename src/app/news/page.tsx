@@ -1,6 +1,6 @@
 
 import Image from 'next/image';
-import { newsArticles } from '@/lib/data';
+import { newsArticles } from '@/lib/data.tsx';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Newspaper } from 'lucide-react';
