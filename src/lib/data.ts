@@ -264,8 +264,25 @@ export const services: Service[] = [
         imageUrl: '/images/busi-dev.png',
         imageHint: 'business planning',
         categoryId: 'consultancy-services'
+    },
+    {
+        id: 's5',
+        name: 'Business development consultancy services',
+        description: 'Providing expert guidance to help your business grow and thrive in the competitive food industry.',
+        imageUrl: 'https://resourcewebsite.singoo.cc/wp-content/uploads/2021/04/service-1-1.jpg',
+        imageHint: 'business development',
+        categoryId: 'consultancy-services'
+    },
+    {
+        id: 's6',
+        name: 'Engineering consultancy services',
+        description: 'Specialized engineering consultancy for factory automation and enhancing efficiency.',
+        imageUrl: 'https://www.debic.com/en/system/images/files/000/017/634/17634/09042021_DEBIC_WEBSITE_2021_SCHOOL_OF_EXCELLENCE_1280X581_BANNER.jpg?1618491761',
+        imageHint: 'factory automation',
+        categoryId: 'consultancy-services'
     }
 ]
 
 
 export const newsArticles = [];
+
