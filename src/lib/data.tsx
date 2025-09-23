@@ -368,7 +368,105 @@ export const services: Service[] = [
         description: 'Specialized engineering consultancy for factory automation and enhancing efficiency.',
         imageUrl: 'https://www.debic.com/en/system/images/files/000/017/634/17634/09042021_DEBIC_WEBSITE_2021_SCHOOL_OF_EXCELLENCE_1280X581_BANNER.jpg?1618491761',
         imageHint: 'factory automation',
-        categoryId: 'consultancy-services'
+        categoryId: 'consultancy-services',
+        longDescription: (
+            <div className="prose prose-lg max-w-none text-muted-foreground">
+              <p className="lead">
+                Smarter Designs. Reliable Systems. Efficient Operations.
+              </p>
+              <p>
+                At Fixora Food Solutions, we believe a factory is more than machines—it’s a living ecosystem of people, processes, and technology that must work in perfect harmony. Our Engineering Consultancy Services are designed to help businesses in Sri Lanka build, upgrade, and optimize their factories for maximum efficiency, safety, and long-term sustainability.
+              </p>
+              <p>
+                From total plant design to machine-level problem solving, Fixora provides 360° engineering expertise: Mechanical, Electrical, Civil, and Automation solutions woven into one seamless approach.
+              </p>
+
+              <h3 className='text-primary-foreground'>Our Engineering Services</h3>
+              <p>We cover the full scope of engineering consultancy, ensuring your production facility operates at its best:</p>
+
+              <h4>1. Total Productive Maintenance (TPM)</h4>
+              <ul>
+                <li>Implementing TPM practices to minimize downtime and maximize machine efficiency.</li>
+                <li>Training your teams in ownership-based equipment care.</li>
+                <li>Building a culture of continuous improvement across your plant.</li>
+              </ul>
+
+              <h4>2. Preventive Maintenance Planning & Scheduling</h4>
+              <ul>
+                <li>Designing preventive maintenance schedules that reduce breakdowns.</li>
+                <li>Introducing monitoring systems that predict issues before they halt production.</li>
+                <li>Extending machine life span and cutting unexpected repair costs.</li>
+              </ul>
+
+              <h4>3. Factory and Plant Designing</h4>
+              <ul>
+                <li>End-to-end factory layout and infrastructure planning.</li>
+                <li>Civil and structural designs for new facilities and expansions.</li>
+                <li>Ergonomic, efficient, and safety-compliant factory layouts.</li>
+                <li>Integration of workflow, utilities, and space optimization for smooth operations.</li>
+              </ul>
+
+              <h4>4. Machine & Equipment Designing</h4>
+              <ul>
+                <li>Custom design of production machinery to meet your specific requirements.</li>
+                <li>Modifications and re-engineering of existing equipment.</li>
+                <li>Incorporating energy-efficient and hygienic designs tailored for the food & dairy sector.</li>
+              </ul>
+
+              <h4>5. Production Planning & Optimization</h4>
+              <ul>
+                <li>Streamlining material flows from raw milk reception to finished product packaging.</li>
+                <li>Designing systems for balanced production lines.</li>
+                <li>Maximizing throughput while reducing waste and downtime.</li>
+              </ul>
+
+              <h4>6. Automation & Smart Solutions</h4>
+              <ul>
+                <li>PLC, SCADA, and IoT-based automation for smarter factory operations.</li>
+                <li>Integration of robotics, sensors, and data systems to drive Industry 4.0.</li>
+                <li>Energy management, process monitoring, and digital dashboards.</li>
+              </ul>
+
+              <h4>7. Multidisciplinary Engineering Solutions</h4>
+              <ul>
+                <li>Mechanical Engineering – Machine design, piping systems, utilities, HVAC.</li>
+                <li>Electrical Engineering – Power distribution, control panel design, automation systems.</li>
+                <li>Civil Engineering – Structural design, construction management, and plant facilities.</li>
+              </ul>
+
+              <h3 className='text-primary-foreground'>Why Partner With Fixora?</h3>
+              <ul>
+                <li>✔ Industry Expertise – Decades of combined knowledge in food, beverage, and dairy factory engineering.</li>
+                <li>✔ Integrated Approach – We break silos—civil, mechanical, and electrical teams work as one.</li>
+                <li>✔ Efficiency-Focused – Every solution targets increased productivity, reduced downtime, and lower costs.</li>
+                <li>✔ Future-Ready Plants – Our solutions embrace automation and sustainability.</li>
+                <li>✔ Practical & Customizable – We adapt engineering principles to fit your actual operations, not textbook cases.</li>
+              </ul>
+
+              <h3 className='text-primary-foreground'>How Our Services Benefit You</h3>
+              <ul>
+                <li>Significant reduction in unplanned breakdowns</li>
+                <li>Optimized use of space, energy, and resources</li>
+                <li>Faster production cycle times and higher output</li>
+                <li>Safer, cleaner, and compliant factory environments</li>
+                <li>Long-term cost savings from efficient designs and preventive systems</li>
+                <li>Confidence to scale your operations as business grows</li>
+              </ul>
+
+              <h3 className='text-primary-foreground'>Industries We Serve</h3>
+              <p>Our engineering consultancy services cater to:</p>
+              <ul>
+                <li>Dairy processing plants</li>
+                <li>Food & beverage manufacturers</li>
+                <li>FMCG factories</li>
+                <li>Agro-processing facilities</li>
+                <li>Other manufacturing industries requiring automation solutions</li>
+              </ul>
+
+              <h3 className='text-primary-foreground'>Your Factory, the Fixora Way</h3>
+              <p>Building or improving a factory is a serious investment. Fixora ensures that every rupee you spend translates into efficiency, robustness, and growth. Whether you need a new facility designed from scratch or wish to upgrade and automate existing systems, we are ready with the expertise and passion to deliver world-class engineering solutions right here in Sri Lanka.</p>
+            </div>
+          )
     }
 ]
 
