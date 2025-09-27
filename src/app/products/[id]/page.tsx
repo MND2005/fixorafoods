@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
-import { products, services, categories } from '@/lib/data.tsx';
+import { products, services, categories } from '@/lib/data';
 import { Badge } from '@/components/ui/badge';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { ProductRecommendations } from '@/components/ProductRecommendations';
@@ -189,7 +189,12 @@ export default function ProductDetailPage({ params }: { params: { id:string } })
         </div>
         
         <div className="mt-20">
-          <h2 className="text-3xl font-bold font-headline mb-8 text-center">You Might Also Like</h2>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold font-headline mb-4">You Might Also Like</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Discover other products that complement {product.name}
+            </p>
+          </div>
           <ProductRecommendations product={product} />
         </div>
       </div>

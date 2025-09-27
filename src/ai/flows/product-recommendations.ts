@@ -32,26 +32,53 @@ const RecommendProductsOutputSchema = z.object({
 export type RecommendProductsOutput = z.infer<typeof RecommendProductsOutputSchema>;
 
 export async function recommendProducts(input: RecommendProductsInput): Promise<RecommendProductsOutput> {
-  return recommendProductsFlow(input);
+  try {
+    return await recommendProductsFlow(input);
+  } catch (error) {
+    console.error('AI recommendation error:', error);
+    // Return empty recommendations to trigger fallback mechanism
+    return { recommendedProducts: [] };
+  }
 }
 
 const prompt = ai.definePrompt({
   name: 'recommendProductsPrompt',
   input: {schema: RecommendProductsInputSchema},
   output: {schema: RecommendProductsOutputSchema},
-  prompt: `You are a product recommendation expert for Fixora food solutions ( pvt) ltd.
+  prompt: `You are a product recommendation expert for Fixora Food Solutions (Pvt) Ltd, a company that provides dairy and food processing equipment and services in Sri Lanka.
 
-  Based on the product the user is currently viewing, recommend other relevant products that the user might be interested in.
-  Provide the product name, description, image URL and category for each recommended product.
+Based on the product the user is currently viewing, recommend 4 other relevant products that the user might be interested in. These recommendations should be complementary products that would enhance or work well with the current product.
 
-  Viewed Product Name: {{{productName}}}
-  Viewed Product Description: {{{productDescription}}}
-  Viewed Product Category: {{{productCategory}}}
-  Viewed Product Image URL: {{{productImageUrl}}}
+Current Product Details:
+- Name: {{{productName}}}
+- Description: {{{productDescription}}}
+- Category: {{{productCategory}}}
+- Image URL: {{{productImageUrl}}}
 
-  Recommend at least 3 products.
-  Format your answer as a JSON array of products, each with name, description, imageUrl and category fields.
-  `,
+Instructions:
+1. Recommend products that are complementary or related to the current product
+2. Ensure recommendations are relevant to the dairy/food processing industry
+3. Include products from both the same category and related categories
+4. Provide realistic product names, descriptions, and categories that match Fixora's product catalog
+5. Use appropriate image URLs for dairy/food processing equipment (use generic but relevant URLs like /images/diary-01.png, /images/diary-02.png, etc.)
+6. Focus on products that would be useful to someone interested in the current product
+
+Format your answer as a JSON object with a "recommendedProducts" array containing exactly 4 products, each with name, description, imageUrl and category fields.
+
+Example format:
+{
+  "recommendedProducts": [
+    {
+      "name": "Milk Storage Tank - 1000L",
+      "description": "Large capacity stainless steel bulk milk cooler with temperature control for efficient storage",
+      "imageUrl": "/images/diary-02.png",
+      "category": "Machinery & Equipment"
+    }
+  ]
+}
+
+Return ONLY valid JSON in the format above. Do not include any other text or explanations.
+`,
 });
 
 const recommendProductsFlow = ai.defineFlow(
@@ -61,7 +88,13 @@ const recommendProductsFlow = ai.defineFlow(
     outputSchema: RecommendProductsOutputSchema,
   },
   async input => {
-    const {output} = await prompt(input);
-    return output!;
+    try {
+      const {output} = await prompt(input);
+      return output!;
+    } catch (error) {
+      console.error('AI flow error:', error);
+      // Return empty recommendations to trigger fallback mechanism
+      return { recommendedProducts: [] } as RecommendProductsOutput;
+    }
   }
 );

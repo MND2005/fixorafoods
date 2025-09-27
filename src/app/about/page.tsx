@@ -1,19 +1,29 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import { Award, BrainCircuit, Handshake, Heart, Leaf, Lightbulb, Recycle, ShieldCheck, Users } from 'lucide-react';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function AboutPage() {
+  const [imageError, setImageError] = useState(false);
+
   return (
     <div className="bg-background">
       <section className="relative w-full h-64 md:h-80">
-        <Image
-          src="https://www.acquisition-international.com/wp-content/uploads/2023/03/AdobeStock_576980630-2.jpg"
-          alt="Diverse team working together"
-          fill
-          className="object-cover z-0"
-          data-ai-hint="team meeting"
-          priority
-        />
+        {!imageError ? (
+          <Image
+            src="/images/hero1.png"
+            alt="Diverse team working together"
+            fill
+            className="object-cover z-0"
+            data-ai-hint="team meeting"
+            priority
+            onError={() => setImageError(true)}
+          />
+        ) : (
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-green-400 z-0" />
+        )}
         <div className="absolute inset-0 bg-black/60 z-10" />
         <div className="relative z-20 flex flex-col items-center justify-center h-full text-center text-white p-4">
           <h1 className="text-4xl md:text-5xl font-bold font-headline drop-shadow-lg">About Fixora Food Solutions (Pvt) Ltd</h1>

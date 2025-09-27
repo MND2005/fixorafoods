@@ -4,6 +4,7 @@ import './globals.css';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Toaster } from '@/components/ui/toaster';
+import { ChatBotWrapper } from '@/components/ChatBotWrapper';
 
 const ptSans = PT_Sans({
   subsets: ['latin'],
@@ -31,6 +32,7 @@ export default function RootLayout({
         <main className="flex-grow">{children}</main>
         <Footer />
         <Toaster />
+        <ChatBotWrapper />
       </body>
     </html>
   );

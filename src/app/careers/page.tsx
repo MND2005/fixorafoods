@@ -1,3 +1,6 @@
+'use client';
+
+import { useState } from 'react';
 import { Award, BrainCircuit, Building, GraduationCap, Handshake, HeartHandshake, Leaf, Lightbulb, Mail, TrendingUp, UserCheck, Users } from 'lucide-react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -6,17 +9,24 @@ import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function CareersPage() {
+  const [imageError, setImageError] = useState(false);
+
   return (
     <div className="bg-background">
       <section className="relative w-full h-64 md:h-80">
-        <Image
-          src="https://www.acquisition-international.com/wp-content/uploads/2023/03/AdobeStock_576980630-2.jpg"
-          alt="Team of people collaborating"
-          fill
-          className="object-cover z-0"
-          data-ai-hint="team collaboration"
-          priority
-        />
+        {!imageError ? (
+          <Image
+            src="/images/hero2.png"
+            alt="Team of people collaborating"
+            fill
+            className="object-cover z-0"
+            data-ai-hint="team collaboration"
+            priority
+            onError={() => setImageError(true)}
+          />
+        ) : (
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-green-400 z-0" />
+        )}
         <div className="absolute inset-0 bg-black/60 z-10" />
         <div className="relative z-20 flex flex-col items-center justify-center h-full text-center text-white p-4">
           <h1 className="text-4xl md:text-5xl font-bold font-headline drop-shadow-lg">Careers at Fixora Food Solutions</h1>
@@ -179,4 +189,3 @@ export default function CareersPage() {
     </div>
   );
 }
-    
