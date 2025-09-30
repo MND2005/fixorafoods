@@ -78,7 +78,7 @@ export function Header() {
     }
     dropdownTimeoutRef.current = setTimeout(() => {
       setIsProductsDropdownOpen(false);
-    }, 500); // 3 seconds
+    }, 3000); // 3 seconds
   };
 
   const clearDropdownTimer = () => {

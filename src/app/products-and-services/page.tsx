@@ -1,11 +1,13 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { products, services } from '@/lib/data';
 import { ProductCard } from '@/components/ProductCard';
+import { Skeleton } from '@/components/ui/skeleton';
 
-export default function ProductsAndServicesPage() {
+// Separate component for the content that uses useSearchParams
+function ProductsContent() {
   const searchParams = useSearchParams();
   const [filteredProducts, setFilteredProducts] = useState(products);
   const [filteredServices, setFilteredServices] = useState(services);
@@ -28,33 +30,69 @@ export default function ProductsAndServicesPage() {
   }, [searchParams]);
 
   return (
+    <>
+      <section id="products" className="mb-16">
+        <h2 className="text-3xl font-headline font-bold text-center mb-10">Products</h2>
+        {filteredProducts.length > 0 ? (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            {filteredProducts.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-8">
+            <p className="text-lg text-muted-foreground">No products found in this category.</p>
+          </div>
+        )}
+      </section>
+
+      <section id="services">
+        <h2 className="text-3xl font-headline font-bold text-center mb-10">Consultancy & Support</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+          {services.map((service) => (
+            <ProductCard key={service.id} product={service} />
+          ))}
+        </div>
+      </section>
+    </>
+  );
+}
+
+// Loading skeleton component
+function ProductsLoading() {
+  return (
+    <div className="space-y-16">
+      <section className="mb-16">
+        <Skeleton className="h-10 w-32 mx-auto mb-10" />
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          {[...Array(4)].map((_, i) => (
+            <Skeleton key={i} className="h-64" />
+          ))}
+        </div>
+      </section>
+      
+      <section>
+        <Skeleton className="h-10 w-64 mx-auto mb-10" />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+          {[...Array(2)].map((_, i) => (
+            <Skeleton key={i} className="h-64" />
+          ))}
+        </div>
+      </section>
+    </div>
+  );
+}
+
+export default function ProductsAndServicesPage() {
+  return (
     <div className="bg-background">
       <div className="container mx-auto px-4 py-12 md:py-20">
         <h1 className="text-4xl font-headline font-bold text-center mb-12">Our Products & Services</h1>
         
-        <section id="products" className="mb-16">
-          <h2 className="text-3xl font-headline font-bold text-center mb-10">Products</h2>
-          {filteredProducts.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-              {filteredProducts.map((product) => (
-                <ProductCard key={product.id} product={product} />
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-8">
-              <p className="text-lg text-muted-foreground">No products found in this category.</p>
-            </div>
-          )}
-        </section>
-
-        <section id="services">
-          <h2 className="text-3xl font-headline font-bold text-center mb-10">Consultancy & Support</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
-            {services.map((service) => (
-              <ProductCard key={service.id} product={service} />
-            ))}
-          </div>
-        </section>
+        {/* Wrap the component using useSearchParams in Suspense */}
+        <Suspense fallback={<ProductsLoading />}>
+          <ProductsContent />
+        </Suspense>
       </div>
     </div>
   );
