@@ -70,8 +70,8 @@ export function Header() {
         href={href}
         onClick={() => setIsMenuOpen(false)}
         className={cn(
-          "transition-colors hover:text-primary",
-          isActive ? "text-primary font-semibold" : "text-foreground/80"
+          "transition-colors hover:text-primary text-base",
+          isActive ? "text-blue-900 font-semibold" : "text-foreground/80"
         )}
       >
         {children}
@@ -87,7 +87,7 @@ export function Header() {
         isScrolled || isMenuOpen ? 'border-b border-border/40 bg-background/95 backdrop-blur-lg' : 'bg-transparent'
       )}
     >
-      <div className="container flex h-20 items-center justify-between">
+      <div className="container mx-auto px-4 flex h-20 items-center justify-between">
         <div className="flex items-center">
           <Link href="/" className="flex items-center space-x-2" onClick={() => setIsMenuOpen(false)}>
              <Image src="/images/fixora-logo.png" alt="Fixora Logo" width={150} height={50} className="h-12 w-auto" />
@@ -95,7 +95,7 @@ export function Header() {
         </div>
         
         <div className="flex items-center space-x-6">
-          <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+          <nav className="hidden md:flex items-center space-x-6 text-base font-medium">
             {navLinks.map(link => <NavLink key={link.href} href={link.href}>{link.label}</NavLink>)}
           </nav>
           
