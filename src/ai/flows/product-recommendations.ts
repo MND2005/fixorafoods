@@ -32,6 +32,15 @@ const RecommendProductsOutputSchema = z.object({
 export type RecommendProductsOutput = z.infer<typeof RecommendProductsOutputSchema>;
 
 export async function recommendProducts(input: RecommendProductsInput): Promise<RecommendProductsOutput> {
+  // Check if AI is available (API key configured)
+  const isAIEnabled = process.env.GOOGLE_API_KEY && process.env.GOOGLE_API_KEY.length > 0;
+  
+  if (!isAIEnabled) {
+    console.warn('AI recommendations disabled due to missing GOOGLE_API_KEY');
+    // Return empty recommendations to trigger fallback mechanism
+    return { recommendedProducts: [] };
+  }
+  
   try {
     return await recommendProductsFlow(input);
   } catch (error) {

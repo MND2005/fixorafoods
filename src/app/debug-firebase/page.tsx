@@ -183,11 +183,11 @@ export default function DebugFirebasePage() {
                         <br />
                         service cloud.firestore {'{'}
                         <br />
-                        &nbsp;&nbsp;match /databases/{{'{database}'}}/documents {'{'}
+                        &nbsp;&nbsp;match /databases/&#123;database&#125;/documents {'{'}
                         <br />
                         &nbsp;&nbsp;&nbsp;&nbsp;// Allow anyone to create contact messages
                         <br />
-                        &nbsp;&nbsp;&nbsp;&nbsp;match /contactMessages/{{'{document}'}} {'{'}
+                        &nbsp;&nbsp;&nbsp;&nbsp;match /contactMessages/&#123;document&#125; {'{'}
                         <br />
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;allow create: if true;
                         <br />
