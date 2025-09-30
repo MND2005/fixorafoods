@@ -17,15 +17,16 @@ import { Separator } from '@/components/ui/separator';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
-export async function generateStaticParams() {
-  const productIds = products.map((product) => ({
-    id: product.id,
-  }));
-  const serviceIds = services.map((service) => ({
-    id: service.id,
-  }));
-  return [...productIds, ...serviceIds];
-}
+// Remove the generateStaticParams function for now
+// export async function generateStaticParams() {
+//   const productIds = products.map((product) => ({
+//     id: product.id,
+//   }));
+//   const serviceIds = services.map((service) => ({
+//     id: service.id,
+//   }));
+//   return [...productIds, ...serviceIds];
+// }
 
 export default function ProductDetailPage({ params }: { params: { id: string } }) {
   const product = products.find((p) => p.id === params.id);
