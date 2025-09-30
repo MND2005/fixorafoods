@@ -13,7 +13,7 @@ export default function AboutPage() {
       <section className="relative w-full h-64 md:h-80">
         {!imageError ? (
           <Image
-            src="/images/hero1.png"
+            src="/images/Robotics.png"
             alt="Diverse team working together"
             fill
             className="object-cover z-0"
