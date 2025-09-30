@@ -11,8 +11,7 @@ function SearchResults() {
   const filteredProducts = useMemo(() => {
     return products.filter(
       (product) =>
-        product.name.toLowerCase().includes(query.toLowerCase()) ||
-        product.description.toLowerCase().includes(query.toLowerCase())
+        product.name.toLowerCase().includes(query.toLowerCase())
     );
   }, [query]);
 
