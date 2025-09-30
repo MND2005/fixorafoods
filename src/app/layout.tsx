@@ -5,6 +5,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Toaster } from '@/components/ui/toaster';
 import { ChatBotWrapper } from '@/components/ChatBotWrapper';
+import { AuthProvider } from '@/context/AuthContext';
 
 const ptSans = PT_Sans({
   subsets: ['latin'],
@@ -28,11 +29,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={ptSans.variable}>
       <body className="flex flex-col min-h-screen font-body antialiased">
-        <Header />
-        <main className="flex-grow">{children}</main>
-        <Footer />
-        <Toaster />
-        <ChatBotWrapper />
+        <AuthProvider>
+          <Header />
+          <main className="flex-grow">{children}</main>
+          <Footer />
+          <Toaster />
+          <ChatBotWrapper />
+        </AuthProvider>
       </body>
     </html>
   );
