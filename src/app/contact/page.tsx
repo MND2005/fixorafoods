@@ -42,14 +42,14 @@ export default function ContactPage() {
                     <Phone className="h-6 w-6 mr-4 mt-1 text-accent flex-shrink-0" />
                     <div>
                       <h3 className="font-bold">Phone</h3>
-                      <p className="text-muted-foreground">Coming Soon</p>
+                      <p className="text-muted-foreground">+94 71 247 6878</p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <MessageSquare className="h-6 w-6 mr-4 mt-1 text-accent flex-shrink-0" />
                     <div>
                       <h3 className="font-bold">WhatsApp</h3>
-                      <p className="text-muted-foreground">Coming Soon</p>
+                      <p className="text-muted-foreground">+94 71 247 6878</p>
                     </div>
                   </div>
                 </div>
