@@ -103,21 +103,6 @@ export const products: Product[] = [
 },
   {
     id: '6',
-    name: 'Milk Can - 10.57 Gallon',
-    description: '10.57 Gallon Stainless Steel Milk Can',
-    longDescription: '10.57 Gallon Stainless Steel Milk Can',
-    imageUrl: '/images/diary-06.png',
-    imageUrls: ['/images/diary-06.png'],
-    imageHint: 'machinery parts',
-    imageHints: ['machinery parts', 'gears cogs'],
-    categoryId: 'machinery-equipment',
-    nutritionalFacts: [
-        { name: 'Construction', value: 'Stainless Steel' },
-        { name: 'Features', value: 'Food-grade materials, Secure lids, Easy handling, Corrosion resistant' },
-    ],
-  },
-  {
-    id: '7',
     name: 'Milk Can',
     description: 'Aluminium Milk Can',
     longDescription: 'Aluminium Milk Can',
@@ -127,12 +112,13 @@ export const products: Product[] = [
     imageHints: ['machinery parts', 'gears cogs'],
     categoryId: 'machinery-equipment',
     nutritionalFacts: [
+        { name: 'Capacity', value: '20 Litre,30 Litre, 50 Litre, 40 Litre' },
         { name: 'Construction', value: 'Aluminium' },
         { name: 'Features', value: 'Food-grade materials, Secure lids, Easy handling, Corrosion resistant' },
     ],
   },
   {
-    id: '8',
+    id: '7',
     name: 'Milk Analyzer',
     description: 'Kurien IoT Bond Milk Collection Unit',
     longDescription: 'We are a leading of kurien iot bond milk collection unit, ultra scan kurien twinsonic milk analyzer with stirrer, ultrascan kurien milk analyzer with thermal printer and iot, ultra scan kurien iot bond pos milk collection unit, kurien mamcu pos mobile automatic milk collection unit and kurien mamcu mobile automatic milk collection unit from Ambala, India.',
@@ -171,18 +157,7 @@ export const services: Service[] = [
         imageUrl: '/images/Robotics.png',
         imageHint: 'industrial automation',
         categoryId: 'consultancy-services',
-        offerings: [
-            'Preventive maintenance',
-            'Corrective repairs',
-            'Automation solutions',
-            'Performance optimization'
-        ],
-        benefits: [
-            'Reduced downtime',
-            'Increased efficiency',
-            'Cost savings',
-            'Improved reliability'
-        ]
+        
     },
     {
         id: 's3',

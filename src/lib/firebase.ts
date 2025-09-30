@@ -3,11 +3,7 @@ import { initializeApp, getApps, getApp } from "firebase/app";
 import { getFirestore, Firestore } from "firebase/firestore";
 import { getAuth, Auth } from "firebase/auth";
 
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
 // Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
   authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
@@ -18,39 +14,58 @@ const firebaseConfig = {
   measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
 };
 
-// Initialize Firebase
+// Validate required environment variables in development
+if (process.env.NODE_ENV !== 'production') {
+  const requiredEnvVars = [
+    'NEXT_PUBLIC_FIREBASE_API_KEY',
+    'NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN',
+    'NEXT_PUBLIC_FIREBASE_PROJECT_ID',
+    'NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET',
+    'NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID',
+    'NEXT_PUBLIC_FIREBASE_APP_ID'
+  ];
+  
+  const missingEnvVars = requiredEnvVars.filter(envVar => !process.env[envVar]);
+  if (missingEnvVars.length > 0) {
+    console.warn('Missing Firebase environment variables:', missingEnvVars);
+  }
+}
+
+// Initialize Firebase with better error handling
 let app;
+let db: Firestore | null = null;
+let auth: Auth | null = null;
+
 try {
-  if (!getApps().length) {
-    app = initializeApp(firebaseConfig);
+  // Only initialize if we have a valid config and aren't already initialized
+  const hasValidConfig = firebaseConfig.apiKey && firebaseConfig.apiKey !== 'undefined';
+  
+  if (hasValidConfig) {
+    if (!getApps().length) {
+      app = initializeApp(firebaseConfig);
+    } else {
+      app = getApp();
+    }
+    
+    // Initialize services only if app was successfully created
+    if (app) {
+      try {
+        db = getFirestore(app);
+      } catch (firestoreError) {
+        console.error("Firestore initialization error:", firestoreError);
+      }
+      
+      try {
+        auth = getAuth(app);
+      } catch (authError) {
+        console.error("Firebase Auth initialization error:", authError);
+      }
+    }
   } else {
-    app = getApp();
+    console.warn("Firebase config not found or invalid. Skipping Firebase initialization.");
   }
 } catch (error) {
   console.error("Firebase initialization error:", error);
-  // Fallback configuration for development
-  app = initializeApp({
-    apiKey: "fake-api-key-for-development-only",
-    projectId: "fixorafood-dev",
-  });
-}
-
-// Initialize Firestore
-let db: Firestore | null;
-try {
-  db = getFirestore(app);
-} catch (error) {
-  console.error("Firestore initialization error:", error);
-  db = null;
-}
-
-// Initialize Firebase Authentication and get a reference to the service
-let auth: Auth | null;
-try {
-  auth = getAuth(app);
-} catch (error) {
-  console.error("Firebase Auth initialization error:", error);
-  auth = null;
 }
 
 export { db, auth };
