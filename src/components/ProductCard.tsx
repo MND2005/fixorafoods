@@ -1,15 +1,22 @@
 'use client';
 
 import * as React from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import type { Product, Service } from '@/lib/types';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { categories } from '@/lib/data.tsx';
-import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
 import Autoplay from 'embla-carousel-autoplay';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
+import { categories } from '@/lib/data';
+import type { Product, Service } from '@/lib/types';
 
 interface ProductCardProps {
   product: Product | Service;
@@ -48,6 +55,18 @@ export function ProductCard({ product }: ProductCardProps) {
                 </CarouselItem>
               ))}
             </CarouselContent>
+            <CarouselPrevious className="absolute top-1/2 left-2 -translate-y-1/2">
+              <Button variant="outline" size="icon">
+                <ChevronLeft className="h-4 w-4" />
+                <span className="sr-only">Previous</span>
+              </Button>
+            </CarouselPrevious>
+            <CarouselNext className="absolute top-1/2 right-2 -translate-y-1/2">
+              <Button variant="outline" size="icon">
+                <ChevronRight className="h-4 w-4" />
+                <span className="sr-only">Next</span>
+              </Button>
+            </CarouselNext>
           </Carousel>
         ) : (
              <Link href={`/products/${product.id}`} className="block">

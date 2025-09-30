@@ -1,4 +1,6 @@
-import { products, services } from '@/lib/data.tsx';
+'use client';
+
+import { products, services } from '@/lib/data';
 import { ProductCard } from '@/components/ProductCard';
 
 export default function ProductsAndServicesPage() {

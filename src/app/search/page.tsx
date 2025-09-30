@@ -1,20 +1,20 @@
 'use client';
 
-import { Suspense } from 'react';
-import { useSearchParams } from 'next/navigation';
-import { products } from '@/lib/data.tsx';
+import { useState, useMemo, Suspense } from 'react';
+import { products } from '@/lib/data';
 import { ProductCard } from '@/components/ProductCard';
 import { Skeleton } from '@/components/ui/skeleton';
 
 function SearchResults() {
-  const searchParams = useSearchParams();
-  const query = searchParams.get('q') || '';
+  const [query, setQuery] = useState('');
 
-  const filteredProducts = products.filter(
-    (product) =>
-      product.name.toLowerCase().includes(query.toLowerCase()) ||
-      product.description.toLowerCase().includes(query.toLowerCase())
-  );
+  const filteredProducts = useMemo(() => {
+    return products.filter(
+      (product) =>
+        product.name.toLowerCase().includes(query.toLowerCase()) ||
+        product.description.toLowerCase().includes(query.toLowerCase())
+    );
+  }, [query]);
 
   return (
     <div className="container mx-auto px-4 py-12">

@@ -27,7 +27,7 @@ export async function generateStaticParams() {
   return [...productIds, ...serviceIds];
 }
 
-export default function ProductDetailPage({ params }: { params: { id:string } }) {
+export default function ProductDetailPage({ params }: { params: { id: string } }) {
   const product = products.find((p) => p.id === params.id);
   const service = services.find((s) => s.id === params.id);
 

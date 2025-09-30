@@ -9,7 +9,7 @@ export default {
   ],
   theme: {
     extend: {
-        typography: ({ theme }) => ({
+        typography: ({ theme }: { theme: (path: string) => string }) => ({
         DEFAULT: {
           css: {
             '--tw-prose-body': theme('colors.muted.foreground'),

@@ -1,53 +1,32 @@
 import { db } from '@/lib/firebase';
-import { collection, getDocs, query, orderBy, limit } from 'firebase/firestore';
-import { getAuth } from 'firebase/auth';
+import { collection, query, orderBy, limit, getDocs } from 'firebase/firestore';
 
 export async function GET() {
+  if (!db) {
+    return new Response(JSON.stringify({ error: 'Firestore not initialized' }), {
+      status: 500,
+      headers: { 'Content-Type': 'application/json' },
+    });
+  }
+
   try {
-    console.log('API: Verifying messages in Firestore');
-    
-    // Try to fetch messages
     const q = query(collection(db, 'contactMessages'), orderBy('createdAt', 'desc'), limit(5));
     const querySnapshot = await getDocs(q);
     
-    const messages: any[] = [];
-    querySnapshot.forEach((doc) => {
-      messages.push({
-        id: doc.id,
-        ...doc.data(),
-      });
+    const messages = querySnapshot.docs.map(doc => ({
+      id: doc.id,
+      ...doc.data()
+    }));
+
+    return new Response(JSON.stringify(messages), {
+      status: 200,
+      headers: { 'Content-Type': 'application/json' },
     });
-    
-    console.log('API: Found messages:', messages.length);
-    
-    return new Response(
-      JSON.stringify({ 
-        success: true, 
-        message: 'Successfully connected to Firestore',
-        documentCount: querySnapshot.size,
-        messages: messages
-      }),
-      {
-        status: 200,
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      }
-    );
-  } catch (error: any) {
-    console.error('API: Error verifying messages:', error);
-    return new Response(
-      JSON.stringify({ 
-        success: false, 
-        message: 'Failed to connect to Firestore',
-        error: error.message
-      }),
-      {
-        status: 500,
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      }
-    );
+  } catch (error) {
+    console.error('Error fetching messages:', error);
+    return new Response(JSON.stringify({ error: 'Failed to fetch messages' }), {
+      status: 500,
+      headers: { 'Content-Type': 'application/json' },
+    });
   }
 }

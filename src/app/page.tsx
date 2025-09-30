@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import Image from 'next/image';
-import { products, heroImages, services } from '@/lib/data.tsx';
+import { products, heroImages, services } from '@/lib/data';
 import { ProductCard } from '@/components/ProductCard';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
